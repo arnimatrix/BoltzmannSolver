@@ -1,0 +1,878 @@
+#ifndef CSL_LIB_BRparity_G_H_INCLUDED
+#define CSL_LIB_BRparity_G_H_INCLUDED
+
+#include <array>
+#include "common.h"
+#include "librarytensor.h"
+#include "callable.h"
+#include "params.h"
+#include "cp_utr1_to_df1c_df2c.h"
+#include "cp_utr1_to_df1c_df3c.h"
+#include "cp_utr1_to_df2c_df1c.h"
+#include "cp_utr1_to_df2c_df3c.h"
+#include "cp_utr1_to_df3c_df1c.h"
+#include "cp_utr1_to_df3c_df2c.h"
+#include "cp_utr1_to_uf1_xx.h"
+#include "cp_utr1_to_uf1_xxc.h"
+#include "cp_utr1_to_uf2_xx.h"
+#include "cp_utr1_to_uf2_xxc.h"
+#include "cp_utr1_to_uf3_xx.h"
+#include "cp_utr1_to_uf3_xxc.h"
+#include "cp_utr2_to_df1c_df2c.h"
+#include "cp_utr2_to_df1c_df3c.h"
+#include "cp_utr2_to_df2c_df1c.h"
+#include "cp_utr2_to_df2c_df3c.h"
+#include "cp_utr2_to_df3c_df1c.h"
+#include "cp_utr2_to_df3c_df2c.h"
+#include "cp_utr2_to_uf1_xx.h"
+#include "cp_utr2_to_uf1_xxc.h"
+#include "cp_utr2_to_uf2_xx.h"
+#include "cp_utr2_to_uf2_xxc.h"
+#include "cp_utr2_to_uf3_xx.h"
+#include "cp_utr2_to_uf3_xxc.h"
+#include "cp_utr3_to_df1c_df2c.h"
+#include "cp_utr3_to_df1c_df3c.h"
+#include "cp_utr3_to_df2c_df1c.h"
+#include "cp_utr3_to_df2c_df3c.h"
+#include "cp_utr3_to_df3c_df1c.h"
+#include "cp_utr3_to_df3c_df2c.h"
+#include "cp_utr3_to_uf1_xx.h"
+#include "cp_utr3_to_uf1_xxc.h"
+#include "cp_utr3_to_uf2_xx.h"
+#include "cp_utr3_to_uf2_xxc.h"
+#include "cp_utr3_to_uf3_xx.h"
+#include "cp_utr3_to_uf3_xxc.h"
+#include "cp_dtr1_to_uf1c_df1c.h"
+#include "cp_dtr1_to_uf1c_df2c.h"
+#include "cp_dtr1_to_uf1c_df3c.h"
+#include "cp_dtr1_to_uf2c_df1c.h"
+#include "cp_dtr1_to_uf2c_df2c.h"
+#include "cp_dtr1_to_uf2c_df3c.h"
+#include "cp_dtr1_to_uf3c_df1c.h"
+#include "cp_dtr1_to_uf3c_df2c.h"
+#include "cp_dtr1_to_uf3c_df3c.h"
+#include "cp_dtr1_to_df1_xx.h"
+#include "cp_dtr1_to_df1_xxc.h"
+#include "cp_dtr1_to_df2_xx.h"
+#include "cp_dtr1_to_df2_xxc.h"
+#include "cp_dtr1_to_df3_xx.h"
+#include "cp_dtr1_to_df3_xxc.h"
+#include "cp_dtr2_to_uf1c_df1c.h"
+#include "cp_dtr2_to_uf1c_df2c.h"
+#include "cp_dtr2_to_uf1c_df3c.h"
+#include "cp_dtr2_to_uf2c_df1c.h"
+#include "cp_dtr2_to_uf2c_df2c.h"
+#include "cp_dtr2_to_uf2c_df3c.h"
+#include "cp_dtr2_to_uf3c_df1c.h"
+#include "cp_dtr2_to_uf3c_df2c.h"
+#include "cp_dtr2_to_uf3c_df3c.h"
+#include "cp_dtr2_to_df1_xx.h"
+#include "cp_dtr2_to_df1_xxc.h"
+#include "cp_dtr2_to_df2_xx.h"
+#include "cp_dtr2_to_df2_xxc.h"
+#include "cp_dtr2_to_df3_xx.h"
+#include "cp_dtr2_to_df3_xxc.h"
+#include "cp_dtr3_to_uf1c_df1c.h"
+#include "cp_dtr3_to_uf1c_df2c.h"
+#include "cp_dtr3_to_uf1c_df3c.h"
+#include "cp_dtr3_to_uf2c_df1c.h"
+#include "cp_dtr3_to_uf2c_df2c.h"
+#include "cp_dtr3_to_uf2c_df3c.h"
+#include "cp_dtr3_to_uf3c_df1c.h"
+#include "cp_dtr3_to_uf3c_df2c.h"
+#include "cp_dtr3_to_uf3c_df3c.h"
+#include "cp_dtr3_to_df1_xx.h"
+#include "cp_dtr3_to_df1_xxc.h"
+#include "cp_dtr3_to_df2_xx.h"
+#include "cp_dtr3_to_df2_xxc.h"
+#include "cp_dtr3_to_df3_xx.h"
+#include "cp_dtr3_to_df3_xxc.h"
+#include "cp_xxc_to_uf1_df1_df1.h"
+#include "cp_xx_to_uf1_df1_df1.h"
+#include "cp_xx_to_uf1c_df1c_df1c.h"
+#include "cp_xxc_to_uf1c_df1c_df1c.h"
+#include "cp_xxc_to_uf1_df1_df2.h"
+#include "cp_xx_to_uf1_df1_df2.h"
+#include "cp_xx_to_uf1c_df1c_df2c.h"
+#include "cp_xxc_to_uf1c_df1c_df2c.h"
+#include "cp_xxc_to_uf1_df1_df3.h"
+#include "cp_xx_to_uf1_df1_df3.h"
+#include "cp_xx_to_uf1c_df1c_df3c.h"
+#include "cp_xxc_to_uf1c_df1c_df3c.h"
+#include "cp_xxc_to_uf1_df2_df1.h"
+#include "cp_xx_to_uf1_df2_df1.h"
+#include "cp_xx_to_uf1c_df2c_df1c.h"
+#include "cp_xxc_to_uf1c_df2c_df1c.h"
+#include "cp_xxc_to_uf1_df2_df2.h"
+#include "cp_xx_to_uf1_df2_df2.h"
+#include "cp_xx_to_uf1c_df2c_df2c.h"
+#include "cp_xxc_to_uf1c_df2c_df2c.h"
+#include "cp_xxc_to_uf1_df2_df3.h"
+#include "cp_xx_to_uf1_df2_df3.h"
+#include "cp_xx_to_uf1c_df2c_df3c.h"
+#include "cp_xxc_to_uf1c_df2c_df3c.h"
+#include "cp_xxc_to_uf1_df3_df1.h"
+#include "cp_xx_to_uf1_df3_df1.h"
+#include "cp_xx_to_uf1c_df3c_df1c.h"
+#include "cp_xxc_to_uf1c_df3c_df1c.h"
+#include "cp_xxc_to_uf1_df3_df2.h"
+#include "cp_xx_to_uf1_df3_df2.h"
+#include "cp_xx_to_uf1c_df3c_df2c.h"
+#include "cp_xxc_to_uf1c_df3c_df2c.h"
+#include "cp_xxc_to_uf1_df3_df3.h"
+#include "cp_xx_to_uf1_df3_df3.h"
+#include "cp_xx_to_uf1c_df3c_df3c.h"
+#include "cp_xxc_to_uf1c_df3c_df3c.h"
+#include "cp_xxc_to_uf2_df1_df1.h"
+#include "cp_xx_to_uf2_df1_df1.h"
+#include "cp_xx_to_uf2c_df1c_df1c.h"
+#include "cp_xxc_to_uf2c_df1c_df1c.h"
+#include "cp_xxc_to_uf2_df1_df2.h"
+#include "cp_xx_to_uf2_df1_df2.h"
+#include "cp_xx_to_uf2c_df1c_df2c.h"
+#include "cp_xxc_to_uf2c_df1c_df2c.h"
+#include "cp_xxc_to_uf2_df1_df3.h"
+#include "cp_xx_to_uf2_df1_df3.h"
+#include "cp_xx_to_uf2c_df1c_df3c.h"
+#include "cp_xxc_to_uf2c_df1c_df3c.h"
+#include "cp_xxc_to_uf2_df2_df1.h"
+#include "cp_xx_to_uf2_df2_df1.h"
+#include "cp_xx_to_uf2c_df2c_df1c.h"
+#include "cp_xxc_to_uf2c_df2c_df1c.h"
+#include "cp_xxc_to_uf2_df2_df2.h"
+#include "cp_xx_to_uf2_df2_df2.h"
+#include "cp_xx_to_uf2c_df2c_df2c.h"
+#include "cp_xxc_to_uf2c_df2c_df2c.h"
+#include "cp_xxc_to_uf2_df2_df3.h"
+#include "cp_xx_to_uf2_df2_df3.h"
+#include "cp_xx_to_uf2c_df2c_df3c.h"
+#include "cp_xxc_to_uf2c_df2c_df3c.h"
+#include "cp_xxc_to_uf2_df3_df1.h"
+#include "cp_xx_to_uf2_df3_df1.h"
+#include "cp_xx_to_uf2c_df3c_df1c.h"
+#include "cp_xxc_to_uf2c_df3c_df1c.h"
+#include "cp_xxc_to_uf2_df3_df2.h"
+#include "cp_xx_to_uf2_df3_df2.h"
+#include "cp_xx_to_uf2c_df3c_df2c.h"
+#include "cp_xxc_to_uf2c_df3c_df2c.h"
+#include "cp_xxc_to_uf2_df3_df3.h"
+#include "cp_xx_to_uf2_df3_df3.h"
+#include "cp_xx_to_uf2c_df3c_df3c.h"
+#include "cp_xxc_to_uf2c_df3c_df3c.h"
+#include "cp_xxc_to_uf3_df1_df1.h"
+#include "cp_xx_to_uf3_df1_df1.h"
+#include "cp_xx_to_uf3c_df1c_df1c.h"
+#include "cp_xxc_to_uf3c_df1c_df1c.h"
+#include "cp_xxc_to_uf3_df1_df2.h"
+#include "cp_xx_to_uf3_df1_df2.h"
+#include "cp_xx_to_uf3c_df1c_df2c.h"
+#include "cp_xxc_to_uf3c_df1c_df2c.h"
+#include "cp_xxc_to_uf3_df1_df3.h"
+#include "cp_xx_to_uf3_df1_df3.h"
+#include "cp_xx_to_uf3c_df1c_df3c.h"
+#include "cp_xxc_to_uf3c_df1c_df3c.h"
+#include "cp_xxc_to_uf3_df2_df1.h"
+#include "cp_xx_to_uf3_df2_df1.h"
+#include "cp_xx_to_uf3c_df2c_df1c.h"
+#include "cp_xxc_to_uf3c_df2c_df1c.h"
+#include "cp_xxc_to_uf3_df2_df2.h"
+#include "cp_xx_to_uf3_df2_df2.h"
+#include "cp_xx_to_uf3c_df2c_df2c.h"
+#include "cp_xxc_to_uf3c_df2c_df2c.h"
+#include "cp_xxc_to_uf3_df2_df3.h"
+#include "cp_xx_to_uf3_df2_df3.h"
+#include "cp_xx_to_uf3c_df2c_df3c.h"
+#include "cp_xxc_to_uf3c_df2c_df3c.h"
+#include "cp_xxc_to_uf3_df3_df1.h"
+#include "cp_xx_to_uf3_df3_df1.h"
+#include "cp_xx_to_uf3c_df3c_df1c.h"
+#include "cp_xxc_to_uf3c_df3c_df1c.h"
+#include "cp_xxc_to_uf3_df3_df2.h"
+#include "cp_xx_to_uf3_df3_df2.h"
+#include "cp_xx_to_uf3c_df3c_df2c.h"
+#include "cp_xxc_to_uf3c_df3c_df2c.h"
+#include "cp_xxc_to_uf3_df3_df3.h"
+#include "cp_xx_to_uf3_df3_df3.h"
+#include "cp_xx_to_uf3c_df3c_df3c.h"
+#include "cp_xxc_to_uf3c_df3c_df3c.h"
+#include "cp_xx_xxc_to_uf1_uf1c.h"
+#include "cp_xx_xx_to_uf1_uf1c.h"
+#include "cp_xxc_xxc_to_uf1_uf1c.h"
+#include "cp_xx_xxc_to_uf2_uf2c.h"
+#include "cp_xx_xx_to_uf2_uf2c.h"
+#include "cp_xxc_xxc_to_uf2_uf2c.h"
+#include "cp_xx_xxc_to_uf3_uf3c.h"
+#include "cp_xx_xx_to_uf3_uf3c.h"
+#include "cp_xxc_xxc_to_uf3_uf3c.h"
+#include "cp_xx_xxc_to_df1_df1c.h"
+#include "cp_xx_xx_to_df1_df1c.h"
+#include "cp_xxc_xxc_to_df1_df1c.h"
+#include "cp_xx_xxc_to_df2_df2c.h"
+#include "cp_xx_xx_to_df2_df2c.h"
+#include "cp_xxc_xxc_to_df2_df2c.h"
+#include "cp_xx_xxc_to_df3_df3c.h"
+#include "cp_xx_xx_to_df3_df3c.h"
+#include "cp_xxc_xxc_to_df3_df3c.h"
+#include "cp_xx_uf1c_to_df1_df1.h"
+#include "cp_xxc_uf1c_to_df1_df1.h"
+#include "cp_xxc_uf1_to_df1c_df1c.h"
+#include "cp_xx_uf1_to_df1c_df1c.h"
+#include "cp_xx_uf1c_to_df1_df2.h"
+#include "cp_xxc_uf1c_to_df1_df2.h"
+#include "cp_xxc_uf1_to_df1c_df2c.h"
+#include "cp_xx_uf1_to_df1c_df2c.h"
+#include "cp_xx_uf1c_to_df1_df3.h"
+#include "cp_xxc_uf1c_to_df1_df3.h"
+#include "cp_xxc_uf1_to_df1c_df3c.h"
+#include "cp_xx_uf1_to_df1c_df3c.h"
+#include "cp_xx_uf1c_to_df2_df1.h"
+#include "cp_xxc_uf1c_to_df2_df1.h"
+#include "cp_xxc_uf1_to_df2c_df1c.h"
+#include "cp_xx_uf1_to_df2c_df1c.h"
+#include "cp_xx_uf1c_to_df2_df2.h"
+#include "cp_xxc_uf1c_to_df2_df2.h"
+#include "cp_xxc_uf1_to_df2c_df2c.h"
+#include "cp_xx_uf1_to_df2c_df2c.h"
+#include "cp_xx_uf1c_to_df2_df3.h"
+#include "cp_xxc_uf1c_to_df2_df3.h"
+#include "cp_xxc_uf1_to_df2c_df3c.h"
+#include "cp_xx_uf1_to_df2c_df3c.h"
+#include "cp_xx_uf1c_to_df3_df1.h"
+#include "cp_xxc_uf1c_to_df3_df1.h"
+#include "cp_xxc_uf1_to_df3c_df1c.h"
+#include "cp_xx_uf1_to_df3c_df1c.h"
+#include "cp_xx_uf1c_to_df3_df2.h"
+#include "cp_xxc_uf1c_to_df3_df2.h"
+#include "cp_xxc_uf1_to_df3c_df2c.h"
+#include "cp_xx_uf1_to_df3c_df2c.h"
+#include "cp_xx_uf1c_to_df3_df3.h"
+#include "cp_xxc_uf1c_to_df3_df3.h"
+#include "cp_xxc_uf1_to_df3c_df3c.h"
+#include "cp_xx_uf1_to_df3c_df3c.h"
+#include "cp_xx_uf2c_to_df1_df1.h"
+#include "cp_xxc_uf2c_to_df1_df1.h"
+#include "cp_xxc_uf2_to_df1c_df1c.h"
+#include "cp_xx_uf2_to_df1c_df1c.h"
+#include "cp_xx_uf2c_to_df1_df2.h"
+#include "cp_xxc_uf2c_to_df1_df2.h"
+#include "cp_xxc_uf2_to_df1c_df2c.h"
+#include "cp_xx_uf2_to_df1c_df2c.h"
+#include "cp_xx_uf2c_to_df1_df3.h"
+#include "cp_xxc_uf2c_to_df1_df3.h"
+#include "cp_xxc_uf2_to_df1c_df3c.h"
+#include "cp_xx_uf2_to_df1c_df3c.h"
+#include "cp_xx_uf2c_to_df2_df1.h"
+#include "cp_xxc_uf2c_to_df2_df1.h"
+#include "cp_xxc_uf2_to_df2c_df1c.h"
+#include "cp_xx_uf2_to_df2c_df1c.h"
+#include "cp_xx_uf2c_to_df2_df2.h"
+#include "cp_xxc_uf2c_to_df2_df2.h"
+#include "cp_xxc_uf2_to_df2c_df2c.h"
+#include "cp_xx_uf2_to_df2c_df2c.h"
+#include "cp_xx_uf2c_to_df2_df3.h"
+#include "cp_xxc_uf2c_to_df2_df3.h"
+#include "cp_xxc_uf2_to_df2c_df3c.h"
+#include "cp_xx_uf2_to_df2c_df3c.h"
+#include "cp_xx_uf2c_to_df3_df1.h"
+#include "cp_xxc_uf2c_to_df3_df1.h"
+#include "cp_xxc_uf2_to_df3c_df1c.h"
+#include "cp_xx_uf2_to_df3c_df1c.h"
+#include "cp_xx_uf2c_to_df3_df2.h"
+#include "cp_xxc_uf2c_to_df3_df2.h"
+#include "cp_xxc_uf2_to_df3c_df2c.h"
+#include "cp_xx_uf2_to_df3c_df2c.h"
+#include "cp_xx_uf2c_to_df3_df3.h"
+#include "cp_xxc_uf2c_to_df3_df3.h"
+#include "cp_xxc_uf2_to_df3c_df3c.h"
+#include "cp_xx_uf2_to_df3c_df3c.h"
+#include "cp_xx_uf3c_to_df1_df1.h"
+#include "cp_xxc_uf3c_to_df1_df1.h"
+#include "cp_xxc_uf3_to_df1c_df1c.h"
+#include "cp_xx_uf3_to_df1c_df1c.h"
+#include "cp_xx_uf3c_to_df1_df2.h"
+#include "cp_xxc_uf3c_to_df1_df2.h"
+#include "cp_xxc_uf3_to_df1c_df2c.h"
+#include "cp_xx_uf3_to_df1c_df2c.h"
+#include "cp_xx_uf3c_to_df1_df3.h"
+#include "cp_xxc_uf3c_to_df1_df3.h"
+#include "cp_xxc_uf3_to_df1c_df3c.h"
+#include "cp_xx_uf3_to_df1c_df3c.h"
+#include "cp_xx_uf3c_to_df2_df1.h"
+#include "cp_xxc_uf3c_to_df2_df1.h"
+#include "cp_xxc_uf3_to_df2c_df1c.h"
+#include "cp_xx_uf3_to_df2c_df1c.h"
+#include "cp_xx_uf3c_to_df2_df2.h"
+#include "cp_xxc_uf3c_to_df2_df2.h"
+#include "cp_xxc_uf3_to_df2c_df2c.h"
+#include "cp_xx_uf3_to_df2c_df2c.h"
+#include "cp_xx_uf3c_to_df2_df3.h"
+#include "cp_xxc_uf3c_to_df2_df3.h"
+#include "cp_xxc_uf3_to_df2c_df3c.h"
+#include "cp_xx_uf3_to_df2c_df3c.h"
+#include "cp_xx_uf3c_to_df3_df1.h"
+#include "cp_xxc_uf3c_to_df3_df1.h"
+#include "cp_xxc_uf3_to_df3c_df1c.h"
+#include "cp_xx_uf3_to_df3c_df1c.h"
+#include "cp_xx_uf3c_to_df3_df2.h"
+#include "cp_xxc_uf3c_to_df3_df2.h"
+#include "cp_xxc_uf3_to_df3c_df2c.h"
+#include "cp_xx_uf3_to_df3c_df2c.h"
+#include "cp_xx_uf3c_to_df3_df3.h"
+#include "cp_xxc_uf3c_to_df3_df3.h"
+#include "cp_xxc_uf3_to_df3c_df3c.h"
+#include "cp_xx_uf3_to_df3c_df3c.h"
+#include "cp_xx_df1c_to_uf1_df1.h"
+#include "cp_xxc_df1c_to_uf1_df1.h"
+#include "cp_xxc_df1_to_uf1c_df1c.h"
+#include "cp_xx_df1_to_uf1c_df1c.h"
+#include "cp_xx_df1c_to_uf1_df2.h"
+#include "cp_xxc_df1c_to_uf1_df2.h"
+#include "cp_xxc_df1_to_uf1c_df2c.h"
+#include "cp_xx_df1_to_uf1c_df2c.h"
+#include "cp_xx_df1c_to_uf1_df3.h"
+#include "cp_xxc_df1c_to_uf1_df3.h"
+#include "cp_xxc_df1_to_uf1c_df3c.h"
+#include "cp_xx_df1_to_uf1c_df3c.h"
+#include "cp_xx_df2c_to_uf1_df1.h"
+#include "cp_xxc_df2c_to_uf1_df1.h"
+#include "cp_xxc_df2_to_uf1c_df1c.h"
+#include "cp_xx_df2_to_uf1c_df1c.h"
+#include "cp_xx_df2c_to_uf1_df2.h"
+#include "cp_xxc_df2c_to_uf1_df2.h"
+#include "cp_xxc_df2_to_uf1c_df2c.h"
+#include "cp_xx_df2_to_uf1c_df2c.h"
+#include "cp_xx_df2c_to_uf1_df3.h"
+#include "cp_xxc_df2c_to_uf1_df3.h"
+#include "cp_xxc_df2_to_uf1c_df3c.h"
+#include "cp_xx_df2_to_uf1c_df3c.h"
+#include "cp_xx_df3c_to_uf1_df1.h"
+#include "cp_xxc_df3c_to_uf1_df1.h"
+#include "cp_xxc_df3_to_uf1c_df1c.h"
+#include "cp_xx_df3_to_uf1c_df1c.h"
+#include "cp_xx_df3c_to_uf1_df2.h"
+#include "cp_xxc_df3c_to_uf1_df2.h"
+#include "cp_xxc_df3_to_uf1c_df2c.h"
+#include "cp_xx_df3_to_uf1c_df2c.h"
+#include "cp_xx_df3c_to_uf1_df3.h"
+#include "cp_xxc_df3c_to_uf1_df3.h"
+#include "cp_xxc_df3_to_uf1c_df3c.h"
+#include "cp_xx_df3_to_uf1c_df3c.h"
+#include "cp_xx_df1c_to_uf2_df1.h"
+#include "cp_xxc_df1c_to_uf2_df1.h"
+#include "cp_xxc_df1_to_uf2c_df1c.h"
+#include "cp_xx_df1_to_uf2c_df1c.h"
+#include "cp_xx_df1c_to_uf2_df2.h"
+#include "cp_xxc_df1c_to_uf2_df2.h"
+#include "cp_xxc_df1_to_uf2c_df2c.h"
+#include "cp_xx_df1_to_uf2c_df2c.h"
+#include "cp_xx_df1c_to_uf2_df3.h"
+#include "cp_xxc_df1c_to_uf2_df3.h"
+#include "cp_xxc_df1_to_uf2c_df3c.h"
+#include "cp_xx_df1_to_uf2c_df3c.h"
+#include "cp_xx_df2c_to_uf2_df1.h"
+#include "cp_xxc_df2c_to_uf2_df1.h"
+#include "cp_xxc_df2_to_uf2c_df1c.h"
+#include "cp_xx_df2_to_uf2c_df1c.h"
+#include "cp_xx_df2c_to_uf2_df2.h"
+#include "cp_xxc_df2c_to_uf2_df2.h"
+#include "cp_xxc_df2_to_uf2c_df2c.h"
+#include "cp_xx_df2_to_uf2c_df2c.h"
+#include "cp_xx_df2c_to_uf2_df3.h"
+#include "cp_xxc_df2c_to_uf2_df3.h"
+#include "cp_xxc_df2_to_uf2c_df3c.h"
+#include "cp_xx_df2_to_uf2c_df3c.h"
+#include "cp_xx_df3c_to_uf2_df1.h"
+#include "cp_xxc_df3c_to_uf2_df1.h"
+#include "cp_xxc_df3_to_uf2c_df1c.h"
+#include "cp_xx_df3_to_uf2c_df1c.h"
+#include "cp_xx_df3c_to_uf2_df2.h"
+#include "cp_xxc_df3c_to_uf2_df2.h"
+#include "cp_xxc_df3_to_uf2c_df2c.h"
+#include "cp_xx_df3_to_uf2c_df2c.h"
+#include "cp_xx_df3c_to_uf2_df3.h"
+#include "cp_xxc_df3c_to_uf2_df3.h"
+#include "cp_xxc_df3_to_uf2c_df3c.h"
+#include "cp_xx_df3_to_uf2c_df3c.h"
+#include "cp_xx_df1c_to_uf3_df1.h"
+#include "cp_xxc_df1c_to_uf3_df1.h"
+#include "cp_xxc_df1_to_uf3c_df1c.h"
+#include "cp_xx_df1_to_uf3c_df1c.h"
+#include "cp_xx_df1c_to_uf3_df2.h"
+#include "cp_xxc_df1c_to_uf3_df2.h"
+#include "cp_xxc_df1_to_uf3c_df2c.h"
+#include "cp_xx_df1_to_uf3c_df2c.h"
+#include "cp_xx_df1c_to_uf3_df3.h"
+#include "cp_xxc_df1c_to_uf3_df3.h"
+#include "cp_xxc_df1_to_uf3c_df3c.h"
+#include "cp_xx_df1_to_uf3c_df3c.h"
+#include "cp_xx_df2c_to_uf3_df1.h"
+#include "cp_xxc_df2c_to_uf3_df1.h"
+#include "cp_xxc_df2_to_uf3c_df1c.h"
+#include "cp_xx_df2_to_uf3c_df1c.h"
+#include "cp_xx_df2c_to_uf3_df2.h"
+#include "cp_xxc_df2c_to_uf3_df2.h"
+#include "cp_xxc_df2_to_uf3c_df2c.h"
+#include "cp_xx_df2_to_uf3c_df2c.h"
+#include "cp_xx_df2c_to_uf3_df3.h"
+#include "cp_xxc_df2c_to_uf3_df3.h"
+#include "cp_xxc_df2_to_uf3c_df3c.h"
+#include "cp_xx_df2_to_uf3c_df3c.h"
+#include "cp_xx_df3c_to_uf3_df1.h"
+#include "cp_xxc_df3c_to_uf3_df1.h"
+#include "cp_xxc_df3_to_uf3c_df1c.h"
+#include "cp_xx_df3_to_uf3c_df1c.h"
+#include "cp_xx_df3c_to_uf3_df2.h"
+#include "cp_xxc_df3c_to_uf3_df2.h"
+#include "cp_xxc_df3_to_uf3c_df2c.h"
+#include "cp_xx_df3_to_uf3c_df2c.h"
+#include "cp_xx_df3c_to_uf3_df3.h"
+#include "cp_xxc_df3c_to_uf3_df3.h"
+#include "cp_xxc_df3_to_uf3c_df3c.h"
+#include "cp_xx_df3_to_uf3c_df3c.h"
+#include "m_xx.h"
+#include "m_xx.h"
+#include "m_xx.h"
+#include "m_xx.h"
+#include "m_xx.h"
+#include "m_xx.h"
+
+namespace brparity {
+
+
+inline std::array<Callable<complex_t, param_t>, 429> f_G = {
+    Callable{"CP_utR1_to_df1c_df2c", CP_utR1_to_df1c_df2c},
+    Callable{"CP_utR1_to_df1c_df3c", CP_utR1_to_df1c_df3c},
+    Callable{"CP_utR1_to_df2c_df1c", CP_utR1_to_df2c_df1c},
+    Callable{"CP_utR1_to_df2c_df3c", CP_utR1_to_df2c_df3c},
+    Callable{"CP_utR1_to_df3c_df1c", CP_utR1_to_df3c_df1c},
+    Callable{"CP_utR1_to_df3c_df2c", CP_utR1_to_df3c_df2c},
+    Callable{"CP_utR1_to_uf1_XX", CP_utR1_to_uf1_XX},
+    Callable{"CP_utR1_to_uf1_XXc", CP_utR1_to_uf1_XXc},
+    Callable{"CP_utR1_to_uf2_XX", CP_utR1_to_uf2_XX},
+    Callable{"CP_utR1_to_uf2_XXc", CP_utR1_to_uf2_XXc},
+    Callable{"CP_utR1_to_uf3_XX", CP_utR1_to_uf3_XX},
+    Callable{"CP_utR1_to_uf3_XXc", CP_utR1_to_uf3_XXc},
+    Callable{"CP_utR2_to_df1c_df2c", CP_utR2_to_df1c_df2c},
+    Callable{"CP_utR2_to_df1c_df3c", CP_utR2_to_df1c_df3c},
+    Callable{"CP_utR2_to_df2c_df1c", CP_utR2_to_df2c_df1c},
+    Callable{"CP_utR2_to_df2c_df3c", CP_utR2_to_df2c_df3c},
+    Callable{"CP_utR2_to_df3c_df1c", CP_utR2_to_df3c_df1c},
+    Callable{"CP_utR2_to_df3c_df2c", CP_utR2_to_df3c_df2c},
+    Callable{"CP_utR2_to_uf1_XX", CP_utR2_to_uf1_XX},
+    Callable{"CP_utR2_to_uf1_XXc", CP_utR2_to_uf1_XXc},
+    Callable{"CP_utR2_to_uf2_XX", CP_utR2_to_uf2_XX},
+    Callable{"CP_utR2_to_uf2_XXc", CP_utR2_to_uf2_XXc},
+    Callable{"CP_utR2_to_uf3_XX", CP_utR2_to_uf3_XX},
+    Callable{"CP_utR2_to_uf3_XXc", CP_utR2_to_uf3_XXc},
+    Callable{"CP_utR3_to_df1c_df2c", CP_utR3_to_df1c_df2c},
+    Callable{"CP_utR3_to_df1c_df3c", CP_utR3_to_df1c_df3c},
+    Callable{"CP_utR3_to_df2c_df1c", CP_utR3_to_df2c_df1c},
+    Callable{"CP_utR3_to_df2c_df3c", CP_utR3_to_df2c_df3c},
+    Callable{"CP_utR3_to_df3c_df1c", CP_utR3_to_df3c_df1c},
+    Callable{"CP_utR3_to_df3c_df2c", CP_utR3_to_df3c_df2c},
+    Callable{"CP_utR3_to_uf1_XX", CP_utR3_to_uf1_XX},
+    Callable{"CP_utR3_to_uf1_XXc", CP_utR3_to_uf1_XXc},
+    Callable{"CP_utR3_to_uf2_XX", CP_utR3_to_uf2_XX},
+    Callable{"CP_utR3_to_uf2_XXc", CP_utR3_to_uf2_XXc},
+    Callable{"CP_utR3_to_uf3_XX", CP_utR3_to_uf3_XX},
+    Callable{"CP_utR3_to_uf3_XXc", CP_utR3_to_uf3_XXc},
+    Callable{"CP_dtR1_to_uf1c_df1c", CP_dtR1_to_uf1c_df1c},
+    Callable{"CP_dtR1_to_uf1c_df2c", CP_dtR1_to_uf1c_df2c},
+    Callable{"CP_dtR1_to_uf1c_df3c", CP_dtR1_to_uf1c_df3c},
+    Callable{"CP_dtR1_to_uf2c_df1c", CP_dtR1_to_uf2c_df1c},
+    Callable{"CP_dtR1_to_uf2c_df2c", CP_dtR1_to_uf2c_df2c},
+    Callable{"CP_dtR1_to_uf2c_df3c", CP_dtR1_to_uf2c_df3c},
+    Callable{"CP_dtR1_to_uf3c_df1c", CP_dtR1_to_uf3c_df1c},
+    Callable{"CP_dtR1_to_uf3c_df2c", CP_dtR1_to_uf3c_df2c},
+    Callable{"CP_dtR1_to_uf3c_df3c", CP_dtR1_to_uf3c_df3c},
+    Callable{"CP_dtR1_to_df1_XX", CP_dtR1_to_df1_XX},
+    Callable{"CP_dtR1_to_df1_XXc", CP_dtR1_to_df1_XXc},
+    Callable{"CP_dtR1_to_df2_XX", CP_dtR1_to_df2_XX},
+    Callable{"CP_dtR1_to_df2_XXc", CP_dtR1_to_df2_XXc},
+    Callable{"CP_dtR1_to_df3_XX", CP_dtR1_to_df3_XX},
+    Callable{"CP_dtR1_to_df3_XXc", CP_dtR1_to_df3_XXc},
+    Callable{"CP_dtR2_to_uf1c_df1c", CP_dtR2_to_uf1c_df1c},
+    Callable{"CP_dtR2_to_uf1c_df2c", CP_dtR2_to_uf1c_df2c},
+    Callable{"CP_dtR2_to_uf1c_df3c", CP_dtR2_to_uf1c_df3c},
+    Callable{"CP_dtR2_to_uf2c_df1c", CP_dtR2_to_uf2c_df1c},
+    Callable{"CP_dtR2_to_uf2c_df2c", CP_dtR2_to_uf2c_df2c},
+    Callable{"CP_dtR2_to_uf2c_df3c", CP_dtR2_to_uf2c_df3c},
+    Callable{"CP_dtR2_to_uf3c_df1c", CP_dtR2_to_uf3c_df1c},
+    Callable{"CP_dtR2_to_uf3c_df2c", CP_dtR2_to_uf3c_df2c},
+    Callable{"CP_dtR2_to_uf3c_df3c", CP_dtR2_to_uf3c_df3c},
+    Callable{"CP_dtR2_to_df1_XX", CP_dtR2_to_df1_XX},
+    Callable{"CP_dtR2_to_df1_XXc", CP_dtR2_to_df1_XXc},
+    Callable{"CP_dtR2_to_df2_XX", CP_dtR2_to_df2_XX},
+    Callable{"CP_dtR2_to_df2_XXc", CP_dtR2_to_df2_XXc},
+    Callable{"CP_dtR2_to_df3_XX", CP_dtR2_to_df3_XX},
+    Callable{"CP_dtR2_to_df3_XXc", CP_dtR2_to_df3_XXc},
+    Callable{"CP_dtR3_to_uf1c_df1c", CP_dtR3_to_uf1c_df1c},
+    Callable{"CP_dtR3_to_uf1c_df2c", CP_dtR3_to_uf1c_df2c},
+    Callable{"CP_dtR3_to_uf1c_df3c", CP_dtR3_to_uf1c_df3c},
+    Callable{"CP_dtR3_to_uf2c_df1c", CP_dtR3_to_uf2c_df1c},
+    Callable{"CP_dtR3_to_uf2c_df2c", CP_dtR3_to_uf2c_df2c},
+    Callable{"CP_dtR3_to_uf2c_df3c", CP_dtR3_to_uf2c_df3c},
+    Callable{"CP_dtR3_to_uf3c_df1c", CP_dtR3_to_uf3c_df1c},
+    Callable{"CP_dtR3_to_uf3c_df2c", CP_dtR3_to_uf3c_df2c},
+    Callable{"CP_dtR3_to_uf3c_df3c", CP_dtR3_to_uf3c_df3c},
+    Callable{"CP_dtR3_to_df1_XX", CP_dtR3_to_df1_XX},
+    Callable{"CP_dtR3_to_df1_XXc", CP_dtR3_to_df1_XXc},
+    Callable{"CP_dtR3_to_df2_XX", CP_dtR3_to_df2_XX},
+    Callable{"CP_dtR3_to_df2_XXc", CP_dtR3_to_df2_XXc},
+    Callable{"CP_dtR3_to_df3_XX", CP_dtR3_to_df3_XX},
+    Callable{"CP_dtR3_to_df3_XXc", CP_dtR3_to_df3_XXc},
+    Callable{"CP_XXc_to_uf1_df1_df1", CP_XXc_to_uf1_df1_df1},
+    Callable{"CP_XX_to_uf1_df1_df1", CP_XX_to_uf1_df1_df1},
+    Callable{"CP_XX_to_uf1c_df1c_df1c", CP_XX_to_uf1c_df1c_df1c},
+    Callable{"CP_XXc_to_uf1c_df1c_df1c", CP_XXc_to_uf1c_df1c_df1c},
+    Callable{"CP_XXc_to_uf1_df1_df2", CP_XXc_to_uf1_df1_df2},
+    Callable{"CP_XX_to_uf1_df1_df2", CP_XX_to_uf1_df1_df2},
+    Callable{"CP_XX_to_uf1c_df1c_df2c", CP_XX_to_uf1c_df1c_df2c},
+    Callable{"CP_XXc_to_uf1c_df1c_df2c", CP_XXc_to_uf1c_df1c_df2c},
+    Callable{"CP_XXc_to_uf1_df1_df3", CP_XXc_to_uf1_df1_df3},
+    Callable{"CP_XX_to_uf1_df1_df3", CP_XX_to_uf1_df1_df3},
+    Callable{"CP_XX_to_uf1c_df1c_df3c", CP_XX_to_uf1c_df1c_df3c},
+    Callable{"CP_XXc_to_uf1c_df1c_df3c", CP_XXc_to_uf1c_df1c_df3c},
+    Callable{"CP_XXc_to_uf1_df2_df1", CP_XXc_to_uf1_df2_df1},
+    Callable{"CP_XX_to_uf1_df2_df1", CP_XX_to_uf1_df2_df1},
+    Callable{"CP_XX_to_uf1c_df2c_df1c", CP_XX_to_uf1c_df2c_df1c},
+    Callable{"CP_XXc_to_uf1c_df2c_df1c", CP_XXc_to_uf1c_df2c_df1c},
+    Callable{"CP_XXc_to_uf1_df2_df2", CP_XXc_to_uf1_df2_df2},
+    Callable{"CP_XX_to_uf1_df2_df2", CP_XX_to_uf1_df2_df2},
+    Callable{"CP_XX_to_uf1c_df2c_df2c", CP_XX_to_uf1c_df2c_df2c},
+    Callable{"CP_XXc_to_uf1c_df2c_df2c", CP_XXc_to_uf1c_df2c_df2c},
+    Callable{"CP_XXc_to_uf1_df2_df3", CP_XXc_to_uf1_df2_df3},
+    Callable{"CP_XX_to_uf1_df2_df3", CP_XX_to_uf1_df2_df3},
+    Callable{"CP_XX_to_uf1c_df2c_df3c", CP_XX_to_uf1c_df2c_df3c},
+    Callable{"CP_XXc_to_uf1c_df2c_df3c", CP_XXc_to_uf1c_df2c_df3c},
+    Callable{"CP_XXc_to_uf1_df3_df1", CP_XXc_to_uf1_df3_df1},
+    Callable{"CP_XX_to_uf1_df3_df1", CP_XX_to_uf1_df3_df1},
+    Callable{"CP_XX_to_uf1c_df3c_df1c", CP_XX_to_uf1c_df3c_df1c},
+    Callable{"CP_XXc_to_uf1c_df3c_df1c", CP_XXc_to_uf1c_df3c_df1c},
+    Callable{"CP_XXc_to_uf1_df3_df2", CP_XXc_to_uf1_df3_df2},
+    Callable{"CP_XX_to_uf1_df3_df2", CP_XX_to_uf1_df3_df2},
+    Callable{"CP_XX_to_uf1c_df3c_df2c", CP_XX_to_uf1c_df3c_df2c},
+    Callable{"CP_XXc_to_uf1c_df3c_df2c", CP_XXc_to_uf1c_df3c_df2c},
+    Callable{"CP_XXc_to_uf1_df3_df3", CP_XXc_to_uf1_df3_df3},
+    Callable{"CP_XX_to_uf1_df3_df3", CP_XX_to_uf1_df3_df3},
+    Callable{"CP_XX_to_uf1c_df3c_df3c", CP_XX_to_uf1c_df3c_df3c},
+    Callable{"CP_XXc_to_uf1c_df3c_df3c", CP_XXc_to_uf1c_df3c_df3c},
+    Callable{"CP_XXc_to_uf2_df1_df1", CP_XXc_to_uf2_df1_df1},
+    Callable{"CP_XX_to_uf2_df1_df1", CP_XX_to_uf2_df1_df1},
+    Callable{"CP_XX_to_uf2c_df1c_df1c", CP_XX_to_uf2c_df1c_df1c},
+    Callable{"CP_XXc_to_uf2c_df1c_df1c", CP_XXc_to_uf2c_df1c_df1c},
+    Callable{"CP_XXc_to_uf2_df1_df2", CP_XXc_to_uf2_df1_df2},
+    Callable{"CP_XX_to_uf2_df1_df2", CP_XX_to_uf2_df1_df2},
+    Callable{"CP_XX_to_uf2c_df1c_df2c", CP_XX_to_uf2c_df1c_df2c},
+    Callable{"CP_XXc_to_uf2c_df1c_df2c", CP_XXc_to_uf2c_df1c_df2c},
+    Callable{"CP_XXc_to_uf2_df1_df3", CP_XXc_to_uf2_df1_df3},
+    Callable{"CP_XX_to_uf2_df1_df3", CP_XX_to_uf2_df1_df3},
+    Callable{"CP_XX_to_uf2c_df1c_df3c", CP_XX_to_uf2c_df1c_df3c},
+    Callable{"CP_XXc_to_uf2c_df1c_df3c", CP_XXc_to_uf2c_df1c_df3c},
+    Callable{"CP_XXc_to_uf2_df2_df1", CP_XXc_to_uf2_df2_df1},
+    Callable{"CP_XX_to_uf2_df2_df1", CP_XX_to_uf2_df2_df1},
+    Callable{"CP_XX_to_uf2c_df2c_df1c", CP_XX_to_uf2c_df2c_df1c},
+    Callable{"CP_XXc_to_uf2c_df2c_df1c", CP_XXc_to_uf2c_df2c_df1c},
+    Callable{"CP_XXc_to_uf2_df2_df2", CP_XXc_to_uf2_df2_df2},
+    Callable{"CP_XX_to_uf2_df2_df2", CP_XX_to_uf2_df2_df2},
+    Callable{"CP_XX_to_uf2c_df2c_df2c", CP_XX_to_uf2c_df2c_df2c},
+    Callable{"CP_XXc_to_uf2c_df2c_df2c", CP_XXc_to_uf2c_df2c_df2c},
+    Callable{"CP_XXc_to_uf2_df2_df3", CP_XXc_to_uf2_df2_df3},
+    Callable{"CP_XX_to_uf2_df2_df3", CP_XX_to_uf2_df2_df3},
+    Callable{"CP_XX_to_uf2c_df2c_df3c", CP_XX_to_uf2c_df2c_df3c},
+    Callable{"CP_XXc_to_uf2c_df2c_df3c", CP_XXc_to_uf2c_df2c_df3c},
+    Callable{"CP_XXc_to_uf2_df3_df1", CP_XXc_to_uf2_df3_df1},
+    Callable{"CP_XX_to_uf2_df3_df1", CP_XX_to_uf2_df3_df1},
+    Callable{"CP_XX_to_uf2c_df3c_df1c", CP_XX_to_uf2c_df3c_df1c},
+    Callable{"CP_XXc_to_uf2c_df3c_df1c", CP_XXc_to_uf2c_df3c_df1c},
+    Callable{"CP_XXc_to_uf2_df3_df2", CP_XXc_to_uf2_df3_df2},
+    Callable{"CP_XX_to_uf2_df3_df2", CP_XX_to_uf2_df3_df2},
+    Callable{"CP_XX_to_uf2c_df3c_df2c", CP_XX_to_uf2c_df3c_df2c},
+    Callable{"CP_XXc_to_uf2c_df3c_df2c", CP_XXc_to_uf2c_df3c_df2c},
+    Callable{"CP_XXc_to_uf2_df3_df3", CP_XXc_to_uf2_df3_df3},
+    Callable{"CP_XX_to_uf2_df3_df3", CP_XX_to_uf2_df3_df3},
+    Callable{"CP_XX_to_uf2c_df3c_df3c", CP_XX_to_uf2c_df3c_df3c},
+    Callable{"CP_XXc_to_uf2c_df3c_df3c", CP_XXc_to_uf2c_df3c_df3c},
+    Callable{"CP_XXc_to_uf3_df1_df1", CP_XXc_to_uf3_df1_df1},
+    Callable{"CP_XX_to_uf3_df1_df1", CP_XX_to_uf3_df1_df1},
+    Callable{"CP_XX_to_uf3c_df1c_df1c", CP_XX_to_uf3c_df1c_df1c},
+    Callable{"CP_XXc_to_uf3c_df1c_df1c", CP_XXc_to_uf3c_df1c_df1c},
+    Callable{"CP_XXc_to_uf3_df1_df2", CP_XXc_to_uf3_df1_df2},
+    Callable{"CP_XX_to_uf3_df1_df2", CP_XX_to_uf3_df1_df2},
+    Callable{"CP_XX_to_uf3c_df1c_df2c", CP_XX_to_uf3c_df1c_df2c},
+    Callable{"CP_XXc_to_uf3c_df1c_df2c", CP_XXc_to_uf3c_df1c_df2c},
+    Callable{"CP_XXc_to_uf3_df1_df3", CP_XXc_to_uf3_df1_df3},
+    Callable{"CP_XX_to_uf3_df1_df3", CP_XX_to_uf3_df1_df3},
+    Callable{"CP_XX_to_uf3c_df1c_df3c", CP_XX_to_uf3c_df1c_df3c},
+    Callable{"CP_XXc_to_uf3c_df1c_df3c", CP_XXc_to_uf3c_df1c_df3c},
+    Callable{"CP_XXc_to_uf3_df2_df1", CP_XXc_to_uf3_df2_df1},
+    Callable{"CP_XX_to_uf3_df2_df1", CP_XX_to_uf3_df2_df1},
+    Callable{"CP_XX_to_uf3c_df2c_df1c", CP_XX_to_uf3c_df2c_df1c},
+    Callable{"CP_XXc_to_uf3c_df2c_df1c", CP_XXc_to_uf3c_df2c_df1c},
+    Callable{"CP_XXc_to_uf3_df2_df2", CP_XXc_to_uf3_df2_df2},
+    Callable{"CP_XX_to_uf3_df2_df2", CP_XX_to_uf3_df2_df2},
+    Callable{"CP_XX_to_uf3c_df2c_df2c", CP_XX_to_uf3c_df2c_df2c},
+    Callable{"CP_XXc_to_uf3c_df2c_df2c", CP_XXc_to_uf3c_df2c_df2c},
+    Callable{"CP_XXc_to_uf3_df2_df3", CP_XXc_to_uf3_df2_df3},
+    Callable{"CP_XX_to_uf3_df2_df3", CP_XX_to_uf3_df2_df3},
+    Callable{"CP_XX_to_uf3c_df2c_df3c", CP_XX_to_uf3c_df2c_df3c},
+    Callable{"CP_XXc_to_uf3c_df2c_df3c", CP_XXc_to_uf3c_df2c_df3c},
+    Callable{"CP_XXc_to_uf3_df3_df1", CP_XXc_to_uf3_df3_df1},
+    Callable{"CP_XX_to_uf3_df3_df1", CP_XX_to_uf3_df3_df1},
+    Callable{"CP_XX_to_uf3c_df3c_df1c", CP_XX_to_uf3c_df3c_df1c},
+    Callable{"CP_XXc_to_uf3c_df3c_df1c", CP_XXc_to_uf3c_df3c_df1c},
+    Callable{"CP_XXc_to_uf3_df3_df2", CP_XXc_to_uf3_df3_df2},
+    Callable{"CP_XX_to_uf3_df3_df2", CP_XX_to_uf3_df3_df2},
+    Callable{"CP_XX_to_uf3c_df3c_df2c", CP_XX_to_uf3c_df3c_df2c},
+    Callable{"CP_XXc_to_uf3c_df3c_df2c", CP_XXc_to_uf3c_df3c_df2c},
+    Callable{"CP_XXc_to_uf3_df3_df3", CP_XXc_to_uf3_df3_df3},
+    Callable{"CP_XX_to_uf3_df3_df3", CP_XX_to_uf3_df3_df3},
+    Callable{"CP_XX_to_uf3c_df3c_df3c", CP_XX_to_uf3c_df3c_df3c},
+    Callable{"CP_XXc_to_uf3c_df3c_df3c", CP_XXc_to_uf3c_df3c_df3c},
+    Callable{"CP_XX_XXc_to_uf1_uf1c", CP_XX_XXc_to_uf1_uf1c},
+    Callable{"CP_XX_XX_to_uf1_uf1c", CP_XX_XX_to_uf1_uf1c},
+    Callable{"CP_XXc_XXc_to_uf1_uf1c", CP_XXc_XXc_to_uf1_uf1c},
+    Callable{"CP_XX_XXc_to_uf2_uf2c", CP_XX_XXc_to_uf2_uf2c},
+    Callable{"CP_XX_XX_to_uf2_uf2c", CP_XX_XX_to_uf2_uf2c},
+    Callable{"CP_XXc_XXc_to_uf2_uf2c", CP_XXc_XXc_to_uf2_uf2c},
+    Callable{"CP_XX_XXc_to_uf3_uf3c", CP_XX_XXc_to_uf3_uf3c},
+    Callable{"CP_XX_XX_to_uf3_uf3c", CP_XX_XX_to_uf3_uf3c},
+    Callable{"CP_XXc_XXc_to_uf3_uf3c", CP_XXc_XXc_to_uf3_uf3c},
+    Callable{"CP_XX_XXc_to_df1_df1c", CP_XX_XXc_to_df1_df1c},
+    Callable{"CP_XX_XX_to_df1_df1c", CP_XX_XX_to_df1_df1c},
+    Callable{"CP_XXc_XXc_to_df1_df1c", CP_XXc_XXc_to_df1_df1c},
+    Callable{"CP_XX_XXc_to_df2_df2c", CP_XX_XXc_to_df2_df2c},
+    Callable{"CP_XX_XX_to_df2_df2c", CP_XX_XX_to_df2_df2c},
+    Callable{"CP_XXc_XXc_to_df2_df2c", CP_XXc_XXc_to_df2_df2c},
+    Callable{"CP_XX_XXc_to_df3_df3c", CP_XX_XXc_to_df3_df3c},
+    Callable{"CP_XX_XX_to_df3_df3c", CP_XX_XX_to_df3_df3c},
+    Callable{"CP_XXc_XXc_to_df3_df3c", CP_XXc_XXc_to_df3_df3c},
+    Callable{"CP_XX_uf1c_to_df1_df1", CP_XX_uf1c_to_df1_df1},
+    Callable{"CP_XXc_uf1c_to_df1_df1", CP_XXc_uf1c_to_df1_df1},
+    Callable{"CP_XXc_uf1_to_df1c_df1c", CP_XXc_uf1_to_df1c_df1c},
+    Callable{"CP_XX_uf1_to_df1c_df1c", CP_XX_uf1_to_df1c_df1c},
+    Callable{"CP_XX_uf1c_to_df1_df2", CP_XX_uf1c_to_df1_df2},
+    Callable{"CP_XXc_uf1c_to_df1_df2", CP_XXc_uf1c_to_df1_df2},
+    Callable{"CP_XXc_uf1_to_df1c_df2c", CP_XXc_uf1_to_df1c_df2c},
+    Callable{"CP_XX_uf1_to_df1c_df2c", CP_XX_uf1_to_df1c_df2c},
+    Callable{"CP_XX_uf1c_to_df1_df3", CP_XX_uf1c_to_df1_df3},
+    Callable{"CP_XXc_uf1c_to_df1_df3", CP_XXc_uf1c_to_df1_df3},
+    Callable{"CP_XXc_uf1_to_df1c_df3c", CP_XXc_uf1_to_df1c_df3c},
+    Callable{"CP_XX_uf1_to_df1c_df3c", CP_XX_uf1_to_df1c_df3c},
+    Callable{"CP_XX_uf1c_to_df2_df1", CP_XX_uf1c_to_df2_df1},
+    Callable{"CP_XXc_uf1c_to_df2_df1", CP_XXc_uf1c_to_df2_df1},
+    Callable{"CP_XXc_uf1_to_df2c_df1c", CP_XXc_uf1_to_df2c_df1c},
+    Callable{"CP_XX_uf1_to_df2c_df1c", CP_XX_uf1_to_df2c_df1c},
+    Callable{"CP_XX_uf1c_to_df2_df2", CP_XX_uf1c_to_df2_df2},
+    Callable{"CP_XXc_uf1c_to_df2_df2", CP_XXc_uf1c_to_df2_df2},
+    Callable{"CP_XXc_uf1_to_df2c_df2c", CP_XXc_uf1_to_df2c_df2c},
+    Callable{"CP_XX_uf1_to_df2c_df2c", CP_XX_uf1_to_df2c_df2c},
+    Callable{"CP_XX_uf1c_to_df2_df3", CP_XX_uf1c_to_df2_df3},
+    Callable{"CP_XXc_uf1c_to_df2_df3", CP_XXc_uf1c_to_df2_df3},
+    Callable{"CP_XXc_uf1_to_df2c_df3c", CP_XXc_uf1_to_df2c_df3c},
+    Callable{"CP_XX_uf1_to_df2c_df3c", CP_XX_uf1_to_df2c_df3c},
+    Callable{"CP_XX_uf1c_to_df3_df1", CP_XX_uf1c_to_df3_df1},
+    Callable{"CP_XXc_uf1c_to_df3_df1", CP_XXc_uf1c_to_df3_df1},
+    Callable{"CP_XXc_uf1_to_df3c_df1c", CP_XXc_uf1_to_df3c_df1c},
+    Callable{"CP_XX_uf1_to_df3c_df1c", CP_XX_uf1_to_df3c_df1c},
+    Callable{"CP_XX_uf1c_to_df3_df2", CP_XX_uf1c_to_df3_df2},
+    Callable{"CP_XXc_uf1c_to_df3_df2", CP_XXc_uf1c_to_df3_df2},
+    Callable{"CP_XXc_uf1_to_df3c_df2c", CP_XXc_uf1_to_df3c_df2c},
+    Callable{"CP_XX_uf1_to_df3c_df2c", CP_XX_uf1_to_df3c_df2c},
+    Callable{"CP_XX_uf1c_to_df3_df3", CP_XX_uf1c_to_df3_df3},
+    Callable{"CP_XXc_uf1c_to_df3_df3", CP_XXc_uf1c_to_df3_df3},
+    Callable{"CP_XXc_uf1_to_df3c_df3c", CP_XXc_uf1_to_df3c_df3c},
+    Callable{"CP_XX_uf1_to_df3c_df3c", CP_XX_uf1_to_df3c_df3c},
+    Callable{"CP_XX_uf2c_to_df1_df1", CP_XX_uf2c_to_df1_df1},
+    Callable{"CP_XXc_uf2c_to_df1_df1", CP_XXc_uf2c_to_df1_df1},
+    Callable{"CP_XXc_uf2_to_df1c_df1c", CP_XXc_uf2_to_df1c_df1c},
+    Callable{"CP_XX_uf2_to_df1c_df1c", CP_XX_uf2_to_df1c_df1c},
+    Callable{"CP_XX_uf2c_to_df1_df2", CP_XX_uf2c_to_df1_df2},
+    Callable{"CP_XXc_uf2c_to_df1_df2", CP_XXc_uf2c_to_df1_df2},
+    Callable{"CP_XXc_uf2_to_df1c_df2c", CP_XXc_uf2_to_df1c_df2c},
+    Callable{"CP_XX_uf2_to_df1c_df2c", CP_XX_uf2_to_df1c_df2c},
+    Callable{"CP_XX_uf2c_to_df1_df3", CP_XX_uf2c_to_df1_df3},
+    Callable{"CP_XXc_uf2c_to_df1_df3", CP_XXc_uf2c_to_df1_df3},
+    Callable{"CP_XXc_uf2_to_df1c_df3c", CP_XXc_uf2_to_df1c_df3c},
+    Callable{"CP_XX_uf2_to_df1c_df3c", CP_XX_uf2_to_df1c_df3c},
+    Callable{"CP_XX_uf2c_to_df2_df1", CP_XX_uf2c_to_df2_df1},
+    Callable{"CP_XXc_uf2c_to_df2_df1", CP_XXc_uf2c_to_df2_df1},
+    Callable{"CP_XXc_uf2_to_df2c_df1c", CP_XXc_uf2_to_df2c_df1c},
+    Callable{"CP_XX_uf2_to_df2c_df1c", CP_XX_uf2_to_df2c_df1c},
+    Callable{"CP_XX_uf2c_to_df2_df2", CP_XX_uf2c_to_df2_df2},
+    Callable{"CP_XXc_uf2c_to_df2_df2", CP_XXc_uf2c_to_df2_df2},
+    Callable{"CP_XXc_uf2_to_df2c_df2c", CP_XXc_uf2_to_df2c_df2c},
+    Callable{"CP_XX_uf2_to_df2c_df2c", CP_XX_uf2_to_df2c_df2c},
+    Callable{"CP_XX_uf2c_to_df2_df3", CP_XX_uf2c_to_df2_df3},
+    Callable{"CP_XXc_uf2c_to_df2_df3", CP_XXc_uf2c_to_df2_df3},
+    Callable{"CP_XXc_uf2_to_df2c_df3c", CP_XXc_uf2_to_df2c_df3c},
+    Callable{"CP_XX_uf2_to_df2c_df3c", CP_XX_uf2_to_df2c_df3c},
+    Callable{"CP_XX_uf2c_to_df3_df1", CP_XX_uf2c_to_df3_df1},
+    Callable{"CP_XXc_uf2c_to_df3_df1", CP_XXc_uf2c_to_df3_df1},
+    Callable{"CP_XXc_uf2_to_df3c_df1c", CP_XXc_uf2_to_df3c_df1c},
+    Callable{"CP_XX_uf2_to_df3c_df1c", CP_XX_uf2_to_df3c_df1c},
+    Callable{"CP_XX_uf2c_to_df3_df2", CP_XX_uf2c_to_df3_df2},
+    Callable{"CP_XXc_uf2c_to_df3_df2", CP_XXc_uf2c_to_df3_df2},
+    Callable{"CP_XXc_uf2_to_df3c_df2c", CP_XXc_uf2_to_df3c_df2c},
+    Callable{"CP_XX_uf2_to_df3c_df2c", CP_XX_uf2_to_df3c_df2c},
+    Callable{"CP_XX_uf2c_to_df3_df3", CP_XX_uf2c_to_df3_df3},
+    Callable{"CP_XXc_uf2c_to_df3_df3", CP_XXc_uf2c_to_df3_df3},
+    Callable{"CP_XXc_uf2_to_df3c_df3c", CP_XXc_uf2_to_df3c_df3c},
+    Callable{"CP_XX_uf2_to_df3c_df3c", CP_XX_uf2_to_df3c_df3c},
+    Callable{"CP_XX_uf3c_to_df1_df1", CP_XX_uf3c_to_df1_df1},
+    Callable{"CP_XXc_uf3c_to_df1_df1", CP_XXc_uf3c_to_df1_df1},
+    Callable{"CP_XXc_uf3_to_df1c_df1c", CP_XXc_uf3_to_df1c_df1c},
+    Callable{"CP_XX_uf3_to_df1c_df1c", CP_XX_uf3_to_df1c_df1c},
+    Callable{"CP_XX_uf3c_to_df1_df2", CP_XX_uf3c_to_df1_df2},
+    Callable{"CP_XXc_uf3c_to_df1_df2", CP_XXc_uf3c_to_df1_df2},
+    Callable{"CP_XXc_uf3_to_df1c_df2c", CP_XXc_uf3_to_df1c_df2c},
+    Callable{"CP_XX_uf3_to_df1c_df2c", CP_XX_uf3_to_df1c_df2c},
+    Callable{"CP_XX_uf3c_to_df1_df3", CP_XX_uf3c_to_df1_df3},
+    Callable{"CP_XXc_uf3c_to_df1_df3", CP_XXc_uf3c_to_df1_df3},
+    Callable{"CP_XXc_uf3_to_df1c_df3c", CP_XXc_uf3_to_df1c_df3c},
+    Callable{"CP_XX_uf3_to_df1c_df3c", CP_XX_uf3_to_df1c_df3c},
+    Callable{"CP_XX_uf3c_to_df2_df1", CP_XX_uf3c_to_df2_df1},
+    Callable{"CP_XXc_uf3c_to_df2_df1", CP_XXc_uf3c_to_df2_df1},
+    Callable{"CP_XXc_uf3_to_df2c_df1c", CP_XXc_uf3_to_df2c_df1c},
+    Callable{"CP_XX_uf3_to_df2c_df1c", CP_XX_uf3_to_df2c_df1c},
+    Callable{"CP_XX_uf3c_to_df2_df2", CP_XX_uf3c_to_df2_df2},
+    Callable{"CP_XXc_uf3c_to_df2_df2", CP_XXc_uf3c_to_df2_df2},
+    Callable{"CP_XXc_uf3_to_df2c_df2c", CP_XXc_uf3_to_df2c_df2c},
+    Callable{"CP_XX_uf3_to_df2c_df2c", CP_XX_uf3_to_df2c_df2c},
+    Callable{"CP_XX_uf3c_to_df2_df3", CP_XX_uf3c_to_df2_df3},
+    Callable{"CP_XXc_uf3c_to_df2_df3", CP_XXc_uf3c_to_df2_df3},
+    Callable{"CP_XXc_uf3_to_df2c_df3c", CP_XXc_uf3_to_df2c_df3c},
+    Callable{"CP_XX_uf3_to_df2c_df3c", CP_XX_uf3_to_df2c_df3c},
+    Callable{"CP_XX_uf3c_to_df3_df1", CP_XX_uf3c_to_df3_df1},
+    Callable{"CP_XXc_uf3c_to_df3_df1", CP_XXc_uf3c_to_df3_df1},
+    Callable{"CP_XXc_uf3_to_df3c_df1c", CP_XXc_uf3_to_df3c_df1c},
+    Callable{"CP_XX_uf3_to_df3c_df1c", CP_XX_uf3_to_df3c_df1c},
+    Callable{"CP_XX_uf3c_to_df3_df2", CP_XX_uf3c_to_df3_df2},
+    Callable{"CP_XXc_uf3c_to_df3_df2", CP_XXc_uf3c_to_df3_df2},
+    Callable{"CP_XXc_uf3_to_df3c_df2c", CP_XXc_uf3_to_df3c_df2c},
+    Callable{"CP_XX_uf3_to_df3c_df2c", CP_XX_uf3_to_df3c_df2c},
+    Callable{"CP_XX_uf3c_to_df3_df3", CP_XX_uf3c_to_df3_df3},
+    Callable{"CP_XXc_uf3c_to_df3_df3", CP_XXc_uf3c_to_df3_df3},
+    Callable{"CP_XXc_uf3_to_df3c_df3c", CP_XXc_uf3_to_df3c_df3c},
+    Callable{"CP_XX_uf3_to_df3c_df3c", CP_XX_uf3_to_df3c_df3c},
+    Callable{"CP_XX_df1c_to_uf1_df1", CP_XX_df1c_to_uf1_df1},
+    Callable{"CP_XXc_df1c_to_uf1_df1", CP_XXc_df1c_to_uf1_df1},
+    Callable{"CP_XXc_df1_to_uf1c_df1c", CP_XXc_df1_to_uf1c_df1c},
+    Callable{"CP_XX_df1_to_uf1c_df1c", CP_XX_df1_to_uf1c_df1c},
+    Callable{"CP_XX_df1c_to_uf1_df2", CP_XX_df1c_to_uf1_df2},
+    Callable{"CP_XXc_df1c_to_uf1_df2", CP_XXc_df1c_to_uf1_df2},
+    Callable{"CP_XXc_df1_to_uf1c_df2c", CP_XXc_df1_to_uf1c_df2c},
+    Callable{"CP_XX_df1_to_uf1c_df2c", CP_XX_df1_to_uf1c_df2c},
+    Callable{"CP_XX_df1c_to_uf1_df3", CP_XX_df1c_to_uf1_df3},
+    Callable{"CP_XXc_df1c_to_uf1_df3", CP_XXc_df1c_to_uf1_df3},
+    Callable{"CP_XXc_df1_to_uf1c_df3c", CP_XXc_df1_to_uf1c_df3c},
+    Callable{"CP_XX_df1_to_uf1c_df3c", CP_XX_df1_to_uf1c_df3c},
+    Callable{"CP_XX_df2c_to_uf1_df1", CP_XX_df2c_to_uf1_df1},
+    Callable{"CP_XXc_df2c_to_uf1_df1", CP_XXc_df2c_to_uf1_df1},
+    Callable{"CP_XXc_df2_to_uf1c_df1c", CP_XXc_df2_to_uf1c_df1c},
+    Callable{"CP_XX_df2_to_uf1c_df1c", CP_XX_df2_to_uf1c_df1c},
+    Callable{"CP_XX_df2c_to_uf1_df2", CP_XX_df2c_to_uf1_df2},
+    Callable{"CP_XXc_df2c_to_uf1_df2", CP_XXc_df2c_to_uf1_df2},
+    Callable{"CP_XXc_df2_to_uf1c_df2c", CP_XXc_df2_to_uf1c_df2c},
+    Callable{"CP_XX_df2_to_uf1c_df2c", CP_XX_df2_to_uf1c_df2c},
+    Callable{"CP_XX_df2c_to_uf1_df3", CP_XX_df2c_to_uf1_df3},
+    Callable{"CP_XXc_df2c_to_uf1_df3", CP_XXc_df2c_to_uf1_df3},
+    Callable{"CP_XXc_df2_to_uf1c_df3c", CP_XXc_df2_to_uf1c_df3c},
+    Callable{"CP_XX_df2_to_uf1c_df3c", CP_XX_df2_to_uf1c_df3c},
+    Callable{"CP_XX_df3c_to_uf1_df1", CP_XX_df3c_to_uf1_df1},
+    Callable{"CP_XXc_df3c_to_uf1_df1", CP_XXc_df3c_to_uf1_df1},
+    Callable{"CP_XXc_df3_to_uf1c_df1c", CP_XXc_df3_to_uf1c_df1c},
+    Callable{"CP_XX_df3_to_uf1c_df1c", CP_XX_df3_to_uf1c_df1c},
+    Callable{"CP_XX_df3c_to_uf1_df2", CP_XX_df3c_to_uf1_df2},
+    Callable{"CP_XXc_df3c_to_uf1_df2", CP_XXc_df3c_to_uf1_df2},
+    Callable{"CP_XXc_df3_to_uf1c_df2c", CP_XXc_df3_to_uf1c_df2c},
+    Callable{"CP_XX_df3_to_uf1c_df2c", CP_XX_df3_to_uf1c_df2c},
+    Callable{"CP_XX_df3c_to_uf1_df3", CP_XX_df3c_to_uf1_df3},
+    Callable{"CP_XXc_df3c_to_uf1_df3", CP_XXc_df3c_to_uf1_df3},
+    Callable{"CP_XXc_df3_to_uf1c_df3c", CP_XXc_df3_to_uf1c_df3c},
+    Callable{"CP_XX_df3_to_uf1c_df3c", CP_XX_df3_to_uf1c_df3c},
+    Callable{"CP_XX_df1c_to_uf2_df1", CP_XX_df1c_to_uf2_df1},
+    Callable{"CP_XXc_df1c_to_uf2_df1", CP_XXc_df1c_to_uf2_df1},
+    Callable{"CP_XXc_df1_to_uf2c_df1c", CP_XXc_df1_to_uf2c_df1c},
+    Callable{"CP_XX_df1_to_uf2c_df1c", CP_XX_df1_to_uf2c_df1c},
+    Callable{"CP_XX_df1c_to_uf2_df2", CP_XX_df1c_to_uf2_df2},
+    Callable{"CP_XXc_df1c_to_uf2_df2", CP_XXc_df1c_to_uf2_df2},
+    Callable{"CP_XXc_df1_to_uf2c_df2c", CP_XXc_df1_to_uf2c_df2c},
+    Callable{"CP_XX_df1_to_uf2c_df2c", CP_XX_df1_to_uf2c_df2c},
+    Callable{"CP_XX_df1c_to_uf2_df3", CP_XX_df1c_to_uf2_df3},
+    Callable{"CP_XXc_df1c_to_uf2_df3", CP_XXc_df1c_to_uf2_df3},
+    Callable{"CP_XXc_df1_to_uf2c_df3c", CP_XXc_df1_to_uf2c_df3c},
+    Callable{"CP_XX_df1_to_uf2c_df3c", CP_XX_df1_to_uf2c_df3c},
+    Callable{"CP_XX_df2c_to_uf2_df1", CP_XX_df2c_to_uf2_df1},
+    Callable{"CP_XXc_df2c_to_uf2_df1", CP_XXc_df2c_to_uf2_df1},
+    Callable{"CP_XXc_df2_to_uf2c_df1c", CP_XXc_df2_to_uf2c_df1c},
+    Callable{"CP_XX_df2_to_uf2c_df1c", CP_XX_df2_to_uf2c_df1c},
+    Callable{"CP_XX_df2c_to_uf2_df2", CP_XX_df2c_to_uf2_df2},
+    Callable{"CP_XXc_df2c_to_uf2_df2", CP_XXc_df2c_to_uf2_df2},
+    Callable{"CP_XXc_df2_to_uf2c_df2c", CP_XXc_df2_to_uf2c_df2c},
+    Callable{"CP_XX_df2_to_uf2c_df2c", CP_XX_df2_to_uf2c_df2c},
+    Callable{"CP_XX_df2c_to_uf2_df3", CP_XX_df2c_to_uf2_df3},
+    Callable{"CP_XXc_df2c_to_uf2_df3", CP_XXc_df2c_to_uf2_df3},
+    Callable{"CP_XXc_df2_to_uf2c_df3c", CP_XXc_df2_to_uf2c_df3c},
+    Callable{"CP_XX_df2_to_uf2c_df3c", CP_XX_df2_to_uf2c_df3c},
+    Callable{"CP_XX_df3c_to_uf2_df1", CP_XX_df3c_to_uf2_df1},
+    Callable{"CP_XXc_df3c_to_uf2_df1", CP_XXc_df3c_to_uf2_df1},
+    Callable{"CP_XXc_df3_to_uf2c_df1c", CP_XXc_df3_to_uf2c_df1c},
+    Callable{"CP_XX_df3_to_uf2c_df1c", CP_XX_df3_to_uf2c_df1c},
+    Callable{"CP_XX_df3c_to_uf2_df2", CP_XX_df3c_to_uf2_df2},
+    Callable{"CP_XXc_df3c_to_uf2_df2", CP_XXc_df3c_to_uf2_df2},
+    Callable{"CP_XXc_df3_to_uf2c_df2c", CP_XXc_df3_to_uf2c_df2c},
+    Callable{"CP_XX_df3_to_uf2c_df2c", CP_XX_df3_to_uf2c_df2c},
+    Callable{"CP_XX_df3c_to_uf2_df3", CP_XX_df3c_to_uf2_df3},
+    Callable{"CP_XXc_df3c_to_uf2_df3", CP_XXc_df3c_to_uf2_df3},
+    Callable{"CP_XXc_df3_to_uf2c_df3c", CP_XXc_df3_to_uf2c_df3c},
+    Callable{"CP_XX_df3_to_uf2c_df3c", CP_XX_df3_to_uf2c_df3c},
+    Callable{"CP_XX_df1c_to_uf3_df1", CP_XX_df1c_to_uf3_df1},
+    Callable{"CP_XXc_df1c_to_uf3_df1", CP_XXc_df1c_to_uf3_df1},
+    Callable{"CP_XXc_df1_to_uf3c_df1c", CP_XXc_df1_to_uf3c_df1c},
+    Callable{"CP_XX_df1_to_uf3c_df1c", CP_XX_df1_to_uf3c_df1c},
+    Callable{"CP_XX_df1c_to_uf3_df2", CP_XX_df1c_to_uf3_df2},
+    Callable{"CP_XXc_df1c_to_uf3_df2", CP_XXc_df1c_to_uf3_df2},
+    Callable{"CP_XXc_df1_to_uf3c_df2c", CP_XXc_df1_to_uf3c_df2c},
+    Callable{"CP_XX_df1_to_uf3c_df2c", CP_XX_df1_to_uf3c_df2c},
+    Callable{"CP_XX_df1c_to_uf3_df3", CP_XX_df1c_to_uf3_df3},
+    Callable{"CP_XXc_df1c_to_uf3_df3", CP_XXc_df1c_to_uf3_df3},
+    Callable{"CP_XXc_df1_to_uf3c_df3c", CP_XXc_df1_to_uf3c_df3c},
+    Callable{"CP_XX_df1_to_uf3c_df3c", CP_XX_df1_to_uf3c_df3c},
+    Callable{"CP_XX_df2c_to_uf3_df1", CP_XX_df2c_to_uf3_df1},
+    Callable{"CP_XXc_df2c_to_uf3_df1", CP_XXc_df2c_to_uf3_df1},
+    Callable{"CP_XXc_df2_to_uf3c_df1c", CP_XXc_df2_to_uf3c_df1c},
+    Callable{"CP_XX_df2_to_uf3c_df1c", CP_XX_df2_to_uf3c_df1c},
+    Callable{"CP_XX_df2c_to_uf3_df2", CP_XX_df2c_to_uf3_df2},
+    Callable{"CP_XXc_df2c_to_uf3_df2", CP_XXc_df2c_to_uf3_df2},
+    Callable{"CP_XXc_df2_to_uf3c_df2c", CP_XXc_df2_to_uf3c_df2c},
+    Callable{"CP_XX_df2_to_uf3c_df2c", CP_XX_df2_to_uf3c_df2c},
+    Callable{"CP_XX_df2c_to_uf3_df3", CP_XX_df2c_to_uf3_df3},
+    Callable{"CP_XXc_df2c_to_uf3_df3", CP_XXc_df2c_to_uf3_df3},
+    Callable{"CP_XXc_df2_to_uf3c_df3c", CP_XXc_df2_to_uf3c_df3c},
+    Callable{"CP_XX_df2_to_uf3c_df3c", CP_XX_df2_to_uf3c_df3c},
+    Callable{"CP_XX_df3c_to_uf3_df1", CP_XX_df3c_to_uf3_df1},
+    Callable{"CP_XXc_df3c_to_uf3_df1", CP_XXc_df3c_to_uf3_df1},
+    Callable{"CP_XXc_df3_to_uf3c_df1c", CP_XXc_df3_to_uf3c_df1c},
+    Callable{"CP_XX_df3_to_uf3c_df1c", CP_XX_df3_to_uf3c_df1c},
+    Callable{"CP_XX_df3c_to_uf3_df2", CP_XX_df3c_to_uf3_df2},
+    Callable{"CP_XXc_df3c_to_uf3_df2", CP_XXc_df3c_to_uf3_df2},
+    Callable{"CP_XXc_df3_to_uf3c_df2c", CP_XXc_df3_to_uf3c_df2c},
+    Callable{"CP_XX_df3_to_uf3c_df2c", CP_XX_df3_to_uf3c_df2c},
+    Callable{"CP_XX_df3c_to_uf3_df3", CP_XX_df3c_to_uf3_df3},
+    Callable{"CP_XXc_df3c_to_uf3_df3", CP_XXc_df3c_to_uf3_df3},
+    Callable{"CP_XXc_df3_to_uf3c_df3c", CP_XXc_df3_to_uf3c_df3c},
+    Callable{"CP_XX_df3_to_uf3c_df3c", CP_XX_df3_to_uf3c_df3c},
+    Callable{"m_XX", m_XX},
+    Callable{"m_XX", m_XX},
+    Callable{"m_XX", m_XX},
+    Callable{"m_XX", m_XX},
+    Callable{"m_XX", m_XX},
+    Callable{"m_XX", m_XX},
+};
+
+
+}
+ // End of namespace brparity
+
+#endif

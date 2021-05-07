@@ -1,0 +1,21 @@
+﻿---
+BasedOnStyle: Mozilla
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: 'true'
+AlignConsecutiveDeclarations: 'true'
+AlignOperands: 'true'
+AlignTrailingComments: 'true'
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+BinPackArguments: 'false'
+BinPackParameters: 'false'
+ColumnLimit: '80'
+ConstructorInitializerAllOnOneLineOrOnePerLine: 'true'
+IndentWidth: '4'
+Language: Cpp
+SortIncludes: 'true'
+SortUsingDeclarations: 'true'
+Standard: Cpp11
+UseTab: Never
+
+...
