@@ -9,8 +9,7 @@ using namespace std;
 using namespace csl;
 using namespace mty;
 
-// To change by the user !
-std::string path_to_generated_library = ".";
+const std::string path_to_generated_library = ".";
 
 Expr cc(Expr const& expr)
 {
