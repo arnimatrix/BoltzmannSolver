@@ -64,7 +64,7 @@ int main(int argc, char const**)
     th    = Eigen::VectorXcd::Zero(3);
     mm    = Eigen::VectorXcd::Zero(3);
     th(0) = M_PI / 4. + 0.01 * 1i;
-    mm(0) = -pow(5.E+03, 2.);
+    mm(0) = -pow(4.5E+03, 2.);
     mm(1) = -pow(6.2E+03, 2.);
     mm(2) = -pow(7.6E+03, 2.);
 
