@@ -4,6 +4,8 @@
 #include <marty.h>
 #include <stdlib.h>
 #include <string>
+#include "particleDataToJson.h"
+#include "particleData.h"
 
 using namespace std;
 using namespace csl;
@@ -311,6 +313,32 @@ int main()
 
     toyModel.refresh();
     std::cout << toyModel << std::endl;
+
+    // toyModel.addQuantumNumber(
+    //         "B",
+    //         {"dtL1", "dtL2", "dtL3"},
+    //         {1, 1, 1},
+    //         false
+    //         );
+
+    // toyModel.addQuantumNumber(
+    //         "n_X",
+    //         {"XX"},
+    //         {3},
+    //         false
+    //         );
+
+    // mty::saveModelDatatoJson("test.json", toyModel);
+    // ParticleData data = ParticleData::readFromJson("test.json");
+    // std::cout << data << '\n';
+    // std::cout << data("B", "dtL3") << '\n';
+    // std::cout << data("n_X", "dtL3") << '\n';
+    // std::cout << data("B", "Q") << '\n';
+    // std::cout << data("n_X", "Q") << '\n';
+    // std::cout << data("B", "XX") << '\n';
+    // std::cout << data("n_X", "XX") << '\n';
+
+    return 0;
 
     auto rules = toyModel.getFeynmanRules();
     Display(rules); // Displays expressions in terminal

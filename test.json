@@ -1,0 +1,256 @@
+"root" : {
+  "particles" : [
+    {
+      "name" : "G",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "Q",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "c_A_C",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "XX",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 3
+      }
+    }, 
+    {
+      "name" : "XX_L",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 3
+      }
+    }, 
+    {
+      "name" : "XX_R",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 3
+      }
+    }, 
+    {
+      "name" : "uf1_L",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "uf2_L",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "uf3_L",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "df1_R",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "df2_R",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "df3_R",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "uf1_R",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "uf2_R",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "uf3_R",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "df1_L",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "df2_L",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "df3_L",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "utL1",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "utL2",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "utL3",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "utR1",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "utR2",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "utR3",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "dtL1",
+      "qnumbers" : {
+        "B" : 1,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "dtL2",
+      "qnumbers" : {
+        "B" : 1,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "dtL3",
+      "qnumbers" : {
+        "B" : 1,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "dtR1",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "dtR2",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "dtR3",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "uf1",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "uf2",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "uf3",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "df1",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "df2",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }, 
+    {
+      "name" : "df3",
+      "qnumbers" : {
+        "B" : 0,
+        "n_X" : 0
+      }
+    }
+  ]
+}
