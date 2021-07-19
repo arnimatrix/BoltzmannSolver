@@ -70,10 +70,10 @@ SpectrumOutput updateDiagonalization(SpectrumInput const &inputs)
         {&outputs.U_utL_00, &outputs.U_utL_01, &outputs.U_utL_02, &outputs.U_utL_10, &outputs.U_utL_11, &outputs.U_utL_12, &outputs.U_utL_20, &outputs.U_utL_21, &outputs.U_utL_22, },
         {&outputs.m_utL1, &outputs.m_utL2, &outputs.m_utL3, }
         );
+    outputs.m_utL1 = std::sqrt(outputs.m_utL1);
+    outputs.m_utL2 = std::sqrt(outputs.m_utL2);
+    outputs.m_utL3 = std::sqrt(outputs.m_utL3);
 
-outputs.m_utL1 = std::sqrt(outputs.m_utL1);
-outputs.m_utL2 = std::sqrt(outputs.m_utL2);
-outputs.m_utL3 = std::sqrt(outputs.m_utL3);
     Diagonalizer::applyDiagonalization(
         {
             -muR_00,
@@ -89,10 +89,10 @@ outputs.m_utL3 = std::sqrt(outputs.m_utL3);
         {&outputs.U_utR_00, &outputs.U_utR_01, &outputs.U_utR_02, &outputs.U_utR_10, &outputs.U_utR_11, &outputs.U_utR_12, &outputs.U_utR_20, &outputs.U_utR_21, &outputs.U_utR_22, },
         {&outputs.m_utR1, &outputs.m_utR2, &outputs.m_utR3, }
         );
+    outputs.m_utR1 = std::sqrt(outputs.m_utR1);
+    outputs.m_utR2 = std::sqrt(outputs.m_utR2);
+    outputs.m_utR3 = std::sqrt(outputs.m_utR3);
 
-outputs.m_utR1 = std::sqrt(outputs.m_utR1);
-outputs.m_utR2 = std::sqrt(outputs.m_utR2);
-outputs.m_utR3 = std::sqrt(outputs.m_utR3);
     Diagonalizer::applyDiagonalization(
         {
             -mdL_00,
@@ -108,10 +108,10 @@ outputs.m_utR3 = std::sqrt(outputs.m_utR3);
         {&outputs.U_dtL_00, &outputs.U_dtL_01, &outputs.U_dtL_02, &outputs.U_dtL_10, &outputs.U_dtL_11, &outputs.U_dtL_12, &outputs.U_dtL_20, &outputs.U_dtL_21, &outputs.U_dtL_22, },
         {&outputs.m_dtL1, &outputs.m_dtL2, &outputs.m_dtL3, }
         );
+    outputs.m_dtL1 = std::sqrt(outputs.m_dtL1);
+    outputs.m_dtL2 = std::sqrt(outputs.m_dtL2);
+    outputs.m_dtL3 = std::sqrt(outputs.m_dtL3);
 
-outputs.m_dtL1 = std::sqrt(outputs.m_dtL1);
-outputs.m_dtL2 = std::sqrt(outputs.m_dtL2);
-outputs.m_dtL3 = std::sqrt(outputs.m_dtL3);
     Diagonalizer::applyDiagonalization(
         {
             -mdR_00,
@@ -127,10 +127,10 @@ outputs.m_dtL3 = std::sqrt(outputs.m_dtL3);
         {&outputs.U_dtR_00, &outputs.U_dtR_01, &outputs.U_dtR_02, &outputs.U_dtR_10, &outputs.U_dtR_11, &outputs.U_dtR_12, &outputs.U_dtR_20, &outputs.U_dtR_21, &outputs.U_dtR_22, },
         {&outputs.m_dtR1, &outputs.m_dtR2, &outputs.m_dtR3, }
         );
+    outputs.m_dtR1 = std::sqrt(outputs.m_dtR1);
+    outputs.m_dtR2 = std::sqrt(outputs.m_dtR2);
+    outputs.m_dtR3 = std::sqrt(outputs.m_dtR3);
 
-outputs.m_dtR1 = std::sqrt(outputs.m_dtR1);
-outputs.m_dtR2 = std::sqrt(outputs.m_dtR2);
-outputs.m_dtR3 = std::sqrt(outputs.m_dtR3);
     Diagonalizer::applyDiagonalization(
         {
             -muL_00,
@@ -146,10 +146,10 @@ outputs.m_dtR3 = std::sqrt(outputs.m_dtR3);
         {&outputs.U_utL_00, &outputs.U_utL_01, &outputs.U_utL_02, &outputs.U_utL_10, &outputs.U_utL_11, &outputs.U_utL_12, &outputs.U_utL_20, &outputs.U_utL_21, &outputs.U_utL_22, },
         {&outputs.m_utL1, &outputs.m_utL2, &outputs.m_utL3, }
         );
+    outputs.m_utL1 = std::sqrt(outputs.m_utL1);
+    outputs.m_utL2 = std::sqrt(outputs.m_utL2);
+    outputs.m_utL3 = std::sqrt(outputs.m_utL3);
 
-outputs.m_utL1 = std::sqrt(outputs.m_utL1);
-outputs.m_utL2 = std::sqrt(outputs.m_utL2);
-outputs.m_utL3 = std::sqrt(outputs.m_utL3);
     Diagonalizer::applyDiagonalization(
         {
             -muR_00,
@@ -165,10 +165,10 @@ outputs.m_utL3 = std::sqrt(outputs.m_utL3);
         {&outputs.U_utR_00, &outputs.U_utR_01, &outputs.U_utR_02, &outputs.U_utR_10, &outputs.U_utR_11, &outputs.U_utR_12, &outputs.U_utR_20, &outputs.U_utR_21, &outputs.U_utR_22, },
         {&outputs.m_utR1, &outputs.m_utR2, &outputs.m_utR3, }
         );
+    outputs.m_utR1 = std::sqrt(outputs.m_utR1);
+    outputs.m_utR2 = std::sqrt(outputs.m_utR2);
+    outputs.m_utR3 = std::sqrt(outputs.m_utR3);
 
-outputs.m_utR1 = std::sqrt(outputs.m_utR1);
-outputs.m_utR2 = std::sqrt(outputs.m_utR2);
-outputs.m_utR3 = std::sqrt(outputs.m_utR3);
     Diagonalizer::applyDiagonalization(
         {
             -mdL_00,
@@ -184,10 +184,10 @@ outputs.m_utR3 = std::sqrt(outputs.m_utR3);
         {&outputs.U_dtL_00, &outputs.U_dtL_01, &outputs.U_dtL_02, &outputs.U_dtL_10, &outputs.U_dtL_11, &outputs.U_dtL_12, &outputs.U_dtL_20, &outputs.U_dtL_21, &outputs.U_dtL_22, },
         {&outputs.m_dtL1, &outputs.m_dtL2, &outputs.m_dtL3, }
         );
+    outputs.m_dtL1 = std::sqrt(outputs.m_dtL1);
+    outputs.m_dtL2 = std::sqrt(outputs.m_dtL2);
+    outputs.m_dtL3 = std::sqrt(outputs.m_dtL3);
 
-outputs.m_dtL1 = std::sqrt(outputs.m_dtL1);
-outputs.m_dtL2 = std::sqrt(outputs.m_dtL2);
-outputs.m_dtL3 = std::sqrt(outputs.m_dtL3);
     Diagonalizer::applyDiagonalization(
         {
             -mdR_00,
@@ -203,11 +203,22 @@ outputs.m_dtL3 = std::sqrt(outputs.m_dtL3);
         {&outputs.U_dtR_00, &outputs.U_dtR_01, &outputs.U_dtR_02, &outputs.U_dtR_10, &outputs.U_dtR_11, &outputs.U_dtR_12, &outputs.U_dtR_20, &outputs.U_dtR_21, &outputs.U_dtR_22, },
         {&outputs.m_dtR1, &outputs.m_dtR2, &outputs.m_dtR3, }
         );
+    outputs.m_dtR1 = std::sqrt(outputs.m_dtR1);
+    outputs.m_dtR2 = std::sqrt(outputs.m_dtR2);
+    outputs.m_dtR3 = std::sqrt(outputs.m_dtR3);
 
-outputs.m_dtR1 = std::sqrt(outputs.m_dtR1);
-outputs.m_dtR2 = std::sqrt(outputs.m_dtR2);
-outputs.m_dtR3 = std::sqrt(outputs.m_dtR3);
     return outputs;
+}
+
+void updateMassExpressions(param_t &params)
+{
+    params.m_XX = m_XX(params).real();
+}
+
+void updateSpectrum(param_t &params)
+{
+    updateDiagonalization(params);
+    updateMassExpressions(params);
 }
 
 } // End of namespace brparity

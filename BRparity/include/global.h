@@ -215,6 +215,10 @@ void readDiagonalizationOutputs(
     output.U_utR_21 = diagData.U_utR_21;
     output.U_utR_22 = diagData.U_utR_22;
 }
+void updateMassExpressions(param_t &params);
+
+void updateSpectrum(param_t &params);
+
 
 } // End of namespace brparity
 

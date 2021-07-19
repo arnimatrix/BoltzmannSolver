@@ -4,8 +4,9 @@
 #include <marty.h>
 #include <stdlib.h>
 #include <string>
-#include "particleDataToJson.h"
-#include "particleData.h"
+#include "processdata.h"
+#include "quantumnumberdata.h"
+#include "libjsondata.h"
 
 using namespace std;
 using namespace csl;
@@ -23,6 +24,8 @@ void calculateAndGenerateLib(std::string const&            initProcessName,
                              std::vector<Insertion> const& insertions,
                              mty::Library&                 lib,
                              std::ofstream&                file,
+                             QuantumNumberData      const &qData,
+                             ProcessData                  &pData,
                              bool                          show = false,
                              bool                          loop = false
 
@@ -40,6 +43,7 @@ void calculateAndGenerateLib(std::string const&            initProcessName,
     const auto sampl            = model.computeSquaredAmplitude(ampl);
     const auto finalProcessName = FindProcessName(initProcessName, insertions);
     if (sampl != CSL_0) {
+        pData.addProcess(finalProcessName, insertions, qData);
         lib.addFunction(finalProcessName, sampl);
         file << finalProcessName << std::endl;
     }
@@ -314,6 +318,34 @@ int main()
     toyModel.refresh();
     std::cout << toyModel << std::endl;
 
+    ///////////////////////////////////////////////////
+    // Quantum number definitions, to complete
+    ///////////////////////////////////////////////////
+
+    QuantumNumberData qData(toyModel);
+    ProcessData       pData(toyModel);
+    qData.addQuantumNumber(
+            "B",
+            {"uf1", "uf2", "uf3", "df1", "df2", "df3"},
+            {1, 1, 1, 1, 1, 1}
+            );
+    qData.addQuantumNumber(
+            "X",
+            {"XX"},
+            {1}
+            );
+
+    ///////////////////////////////////////////////////
+    // 
+    ///////////////////////////////////////////////////
+
+    // addQNumber(
+    //         "EM",
+    //         {"e", "u", "d"},
+    //         {-1, 2*CSL_1/3, -CSL_1/3, CSL_1/4},
+    //         false
+    //         );
+
     // toyModel.addQuantumNumber(
     //         "B",
     //         {"dtL1", "dtL2", "dtL3"},
@@ -330,15 +362,16 @@ int main()
 
     // mty::saveModelDatatoJson("test.json", toyModel);
     // ParticleData data = ParticleData::readFromJson("test.json");
+    // std::cout << data.getCommonFactor("B") << '\n';
     // std::cout << data << '\n';
-    // std::cout << data("B", "dtL3") << '\n';
+    // std::cout << data("B", "dtL3") * 1. / data.getCommonFactor("B") << '\n';
     // std::cout << data("n_X", "dtL3") << '\n';
     // std::cout << data("B", "Q") << '\n';
     // std::cout << data("n_X", "Q") << '\n';
     // std::cout << data("B", "XX") << '\n';
     // std::cout << data("n_X", "XX") << '\n';
 
-    return 0;
+    // return 0;
 
     auto rules = toyModel.getFeynmanRules();
     Display(rules); // Displays expressions in terminal
@@ -383,7 +416,7 @@ int main()
                                    Outgoing(AntiPart(dfRj)),
                                    Outgoing(AntiPart(dfRk)) };
                 calculateAndGenerateLib(
-                  "CP", toyModel, insertion, myLib, Decay);
+                  "CP", toyModel, insertion, myLib, Decay, qData, pData);
             }
         }
         for (size_t j = 0; j != uq.size(); ++j) {
@@ -392,8 +425,8 @@ int main()
             auto insertion1 = { Incoming(usRi),
                                 Outgoing(ufRj),
                                 Outgoing(AntiPart("XX")) };
-            calculateAndGenerateLib("CP", toyModel, insertion, myLib, Decay);
-            calculateAndGenerateLib("CP", toyModel, insertion1, myLib, Decay);
+            calculateAndGenerateLib("CP", toyModel, insertion, myLib, Decay, qData, pData);
+            calculateAndGenerateLib("CP", toyModel, insertion1, myLib, Decay, qData, pData);
         }
     }
 
@@ -407,7 +440,7 @@ int main()
                                    Outgoing(AntiPart(ufRj)),
                                    Outgoing(AntiPart(dfRk)) };
                 calculateAndGenerateLib(
-                  "CP", toyModel, insertion, myLib, Decay);
+                  "CP", toyModel, insertion, myLib, Decay, qData, pData);
             }
         }
         for (size_t j = 0; j != dq.size(); ++j) {
@@ -416,8 +449,8 @@ int main()
             auto insertion1 = { Incoming(dsRi),
                                 Outgoing(dfRj),
                                 Outgoing(AntiPart("XX")) };
-            calculateAndGenerateLib("CP", toyModel, insertion, myLib, Decay);
-            calculateAndGenerateLib("CP", toyModel, insertion1, myLib, Decay);
+            calculateAndGenerateLib("CP", toyModel, insertion, myLib, Decay, qData, pData);
+            calculateAndGenerateLib("CP", toyModel, insertion1, myLib, Decay, qData, pData);
         }
     }
 
@@ -436,13 +469,13 @@ int main()
                                     Outgoing(dfRj),
                                     Outgoing(dfRk) };
                 calculateAndGenerateLib(
-                  "CP", toyModel, insertion, myLib, DecayB);
+                  "CP", toyModel, insertion, myLib, DecayB, qData, pData);
                 calculateAndGenerateLib(
-                  "CP", toyModel, insertion1, myLib, DecayB);
+                  "CP", toyModel, insertion1, myLib, DecayB, qData, pData);
                 calculateAndGenerateLib(
-                  "CP", toyModel, AntiPart(insertion), myLib, DecayAB);
+                  "CP", toyModel, AntiPart(insertion), myLib, DecayAB, qData, pData);
                 calculateAndGenerateLib(
-                  "CP", toyModel, AntiPart(insertion1), myLib, DecayAB);
+                  "CP", toyModel, AntiPart(insertion1), myLib, DecayAB, qData, pData);
             }
         }
     }
@@ -461,9 +494,9 @@ int main()
                             Incoming(AntiPart("XX")),
                             Outgoing(uLi),
                             Outgoing(AntiPart(uLi)) };
-        calculateAndGenerateLib("CP", toyModel, insertion, myLib, Scatt);
-        calculateAndGenerateLib("CP", toyModel, insertion1, myLib, Scatt);
-        calculateAndGenerateLib("CP", toyModel, insertion2, myLib, Scatt);
+        calculateAndGenerateLib("CP", toyModel, insertion, myLib, Scatt, qData, pData);
+        calculateAndGenerateLib("CP", toyModel, insertion1, myLib, Scatt, qData, pData);
+        calculateAndGenerateLib("CP", toyModel, insertion2, myLib, Scatt, qData, pData);
     }
 
     for (size_t i = 0; i != dq.size(); ++i) {
@@ -480,9 +513,9 @@ int main()
                             Incoming(AntiPart("XX")),
                             Outgoing(dLi),
                             Outgoing(AntiPart(dLi)) };
-        calculateAndGenerateLib("CP", toyModel, insertion, myLib, Scatt);
-        calculateAndGenerateLib("CP", toyModel, insertion1, myLib, Scatt);
-        calculateAndGenerateLib("CP", toyModel, insertion2, myLib, Scatt);
+        calculateAndGenerateLib("CP", toyModel, insertion, myLib, Scatt, qData, pData);
+        calculateAndGenerateLib("CP", toyModel, insertion1, myLib, Scatt, qData, pData);
+        calculateAndGenerateLib("CP", toyModel, insertion2, myLib, Scatt, qData, pData);
     }
 
     for (size_t i = 0; i != uq.size(); ++i) {
@@ -500,13 +533,13 @@ int main()
                                     Outgoing(dfRj),
                                     Outgoing(dfRk) };
                 calculateAndGenerateLib(
-                  "CP", toyModel, insertion, myLib, ScattB);
+                  "CP", toyModel, insertion, myLib, ScattB, qData, pData);
                 calculateAndGenerateLib(
-                  "CP", toyModel, insertion1, myLib, ScattB);
+                  "CP", toyModel, insertion1, myLib, ScattB, qData, pData);
                 calculateAndGenerateLib(
-                  "CP", toyModel, AntiPart(insertion), myLib, ScattAB);
+                  "CP", toyModel, AntiPart(insertion), myLib, ScattAB, qData, pData);
                 calculateAndGenerateLib(
-                  "CP", toyModel, AntiPart(insertion1), myLib, ScattAB);
+                  "CP", toyModel, AntiPart(insertion1), myLib, ScattAB, qData, pData);
             }
         }
     }
@@ -526,13 +559,13 @@ int main()
                                     Outgoing(ufRi),
                                     Outgoing(dfRk) };
                 calculateAndGenerateLib(
-                  "CP", toyModel, insertion, myLib, DecayB);
+                  "CP", toyModel, insertion, myLib, DecayB, qData, pData);
                 calculateAndGenerateLib(
-                  "CP", toyModel, insertion1, myLib, DecayB);
+                  "CP", toyModel, insertion1, myLib, DecayB, qData, pData);
                 calculateAndGenerateLib(
-                  "CP", toyModel, AntiPart(insertion), myLib, DecayAB);
+                  "CP", toyModel, AntiPart(insertion), myLib, DecayAB, qData, pData);
                 calculateAndGenerateLib(
-                  "CP", toyModel, AntiPart(insertion1), myLib, DecayAB);
+                  "CP", toyModel, AntiPart(insertion1), myLib, DecayAB, qData, pData);
             }
         }
     }
@@ -543,6 +576,12 @@ int main()
     Scatt.close();
     ScattB.close();
     ScattAB.close();
+
+    ///////////////////////////////////////////////////
+    // Saving JSON data to test.json
+    ///////////////////////////////////////////////////
+
+    saveParticleData("test.json", qData, pData);
 
     myLib.generateSpectrum(toyModel);
     // myLib.importLHAModule(".");

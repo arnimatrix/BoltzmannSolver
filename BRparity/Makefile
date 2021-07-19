@@ -22,7 +22,10 @@ MATH_OPTI = \
 		-fassociative-math\
 		-freciprocal-math
 
-CFLAGS = -std=c++17 -O2 $(MATH_OPTI) -Wall -Wextra -Wpedantic -Wno-deprecated-declarations -fPIC
+DEFAULTFLAGS = -std=c++17 -Wall -Wextra -Wpedantic -Wno-deprecated-declarations -fPIC
+OPTIFLAGS = -O2 $(MATH_OPTI)
+CXXFLAGS  = $(DEFAULTFLAGS) $(OPTIFLAGS)
+LINKFLAGS = $(DEFAULTFLAGS)
 
 SRCDIR = src
 INCDIR = include
@@ -46,16 +49,16 @@ scripts: $(BINARIES)
 lib: $(NAMELIB).so $(NAMELIB).a
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
-	$(CXX) $(CFLAGS) -c $< -o $@ $(INCPATH)
+	$(CXX) $(CXXFLAGS) -c $< -o $@ $(INCPATH)
 
 $(SOBJDIR)/%.o: $(SCRIPTDIR)/%.cpp
-	$(CXX) $(CFLAGS) -c $< -o $@ $(INCPATH)
+	$(CXX) $(CXXFLAGS) -c $< -o $@ $(INCPATH)
 
 %.x: $(SOBJDIR)/%.o $(OBJ)
-	$(CXX) $(CFLAGS) -o $(BINDIR)/$@ $< $(OBJ) $(INCPATH) $(LIBPATH) $(LIBS)
+	$(CXX) $(LINKFLAGS) -o $(BINDIR)/$@ $< $(OBJ) $(INCPATH) $(LIBPATH) $(LIBS)
 
 $(NAMELIB).so: $(OBJ)
-	$(CXX) $(CFLAGS) -shared -o $(LIBDIR)/$@ $(OBJ) $(LIBPATH) $(LIBS)
+	$(CXX) $(CXXFLAGS) -shared -o $(LIBDIR)/$@ $(OBJ) $(LIBPATH) $(LIBS)
 $(NAMELIB).a: $(OBJ)
 	ar rcs $(LIBDIR)/$@ $(OBJ)
 

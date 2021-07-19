@@ -1,256 +1,7851 @@
 "root" : {
-  "particles" : [
+  "quantum numbers" : [
     {
-      "name" : "G",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "B",
+      "factor" : 1,
+      "particles" : [
+        {
+          "name" : "uf1",
+          "value" : 1
+        }, 
+        {
+          "name" : "uf2",
+          "value" : 1
+        }, 
+        {
+          "name" : "uf3",
+          "value" : 1
+        }, 
+        {
+          "name" : "df1",
+          "value" : 1
+        }, 
+        {
+          "name" : "df2",
+          "value" : 1
+        }, 
+        {
+          "name" : "df3",
+          "value" : 1
+        }, 
+        {
+          "name" : "uf1_R",
+          "value" : 1
+        }, 
+        {
+          "name" : "uf1_L",
+          "value" : 1
+        }, 
+        {
+          "name" : "uf2_R",
+          "value" : 1
+        }, 
+        {
+          "name" : "uf2_L",
+          "value" : 1
+        }, 
+        {
+          "name" : "uf3_R",
+          "value" : 1
+        }, 
+        {
+          "name" : "uf3_L",
+          "value" : 1
+        }, 
+        {
+          "name" : "df1_R",
+          "value" : 1
+        }, 
+        {
+          "name" : "df1_L",
+          "value" : 1
+        }, 
+        {
+          "name" : "df2_R",
+          "value" : 1
+        }, 
+        {
+          "name" : "df2_L",
+          "value" : 1
+        }, 
+        {
+          "name" : "df3_R",
+          "value" : 1
+        }, 
+        {
+          "name" : "df3_L",
+          "value" : 1
+        }
+      ]
     }, 
     {
-      "name" : "Q",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "X",
+      "factor" : 1,
+      "particles" : [
+        {
+          "name" : "XX",
+          "value" : 1
+        }, 
+        {
+          "name" : "XX_L",
+          "value" : 1
+        }, 
+        {
+          "name" : "XX_R",
+          "value" : 1
+        }
+      ]
+    }
+  ],
+  "processes" : [
+    {
+      "name" : "CP_utR1_to_df1c_df2c",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "c_A_C",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR1_to_df1c_df3c",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "XX",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 3
-      }
+      "name" : "CP_utR1_to_df2c_df1c",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "XX_L",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 3
-      }
+      "name" : "CP_utR1_to_df2c_df3c",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "XX_R",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 3
-      }
+      "name" : "CP_utR1_to_df3c_df1c",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "uf1_L",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR1_to_df3c_df2c",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "uf2_L",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR1_to_uf1_XX",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "uf1", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
     }, 
     {
-      "name" : "uf3_L",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR1_to_uf1_XXc",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "uf1", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
     }, 
     {
-      "name" : "df1_R",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR1_to_uf2_XX",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "uf2", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
     }, 
     {
-      "name" : "df2_R",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR1_to_uf2_XXc",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "uf2", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
     }, 
     {
-      "name" : "df3_R",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR1_to_uf3_XX",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "uf3", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
     }, 
     {
-      "name" : "uf1_R",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR1_to_uf3_XXc",
+      "incoming" : [
+        "utR1"
+      ],
+      "outgoing" : [
+        "uf3", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
     }, 
     {
-      "name" : "uf2_R",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_df1c_df2c",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "uf3_R",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_df1c_df3c",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "df1_L",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_df2c_df1c",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "df2_L",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_df2c_df3c",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "df3_L",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_df3c_df1c",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "utL1",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_df3c_df2c",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "utL2",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_uf1_XX",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "uf1", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
     }, 
     {
-      "name" : "utL3",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_uf1_XXc",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "uf1", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
     }, 
     {
-      "name" : "utR1",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_uf2_XX",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "uf2", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
     }, 
     {
-      "name" : "utR2",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_uf2_XXc",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "uf2", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
     }, 
     {
-      "name" : "utR3",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_uf3_XX",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "uf3", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
     }, 
     {
-      "name" : "dtL1",
-      "qnumbers" : {
-        "B" : 1,
-        "n_X" : 0
-      }
+      "name" : "CP_utR2_to_uf3_XXc",
+      "incoming" : [
+        "utR2"
+      ],
+      "outgoing" : [
+        "uf3", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
     }, 
     {
-      "name" : "dtL2",
-      "qnumbers" : {
-        "B" : 1,
-        "n_X" : 0
-      }
+      "name" : "CP_utR3_to_df1c_df2c",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "dtL3",
-      "qnumbers" : {
-        "B" : 1,
-        "n_X" : 0
-      }
+      "name" : "CP_utR3_to_df1c_df3c",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "dtR1",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR3_to_df2c_df1c",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "dtR2",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR3_to_df2c_df3c",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "dtR3",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR3_to_df3c_df1c",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "uf1",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR3_to_df3c_df2c",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
     }, 
     {
-      "name" : "uf2",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR3_to_uf1_XX",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "uf1", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
     }, 
     {
-      "name" : "uf3",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR3_to_uf1_XXc",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "uf1", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
     }, 
     {
-      "name" : "df1",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR3_to_uf2_XX",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "uf2", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
     }, 
     {
-      "name" : "df2",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR3_to_uf2_XXc",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "uf2", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
     }, 
     {
-      "name" : "df3",
-      "qnumbers" : {
-        "B" : 0,
-        "n_X" : 0
-      }
+      "name" : "CP_utR3_to_uf3_XX",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "uf3", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_utR3_to_uf3_XXc",
+      "incoming" : [
+        "utR3"
+      ],
+      "outgoing" : [
+        "uf3", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_uf1c_df1c",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_uf1c_df2c",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_uf1c_df3c",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_uf2c_df1c",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_uf2c_df2c",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_uf2c_df3c",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_uf3c_df1c",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_uf3c_df2c",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_uf3c_df3c",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_df1_XX",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "df1", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_df1_XXc",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "df1", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_df2_XX",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "df2", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_df2_XXc",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "df2", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_df3_XX",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "df3", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR1_to_df3_XXc",
+      "incoming" : [
+        "dtR1"
+      ],
+      "outgoing" : [
+        "df3", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_uf1c_df1c",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_uf1c_df2c",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_uf1c_df3c",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_uf2c_df1c",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_uf2c_df2c",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_uf2c_df3c",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_uf3c_df1c",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_uf3c_df2c",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_uf3c_df3c",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_df1_XX",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "df1", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_df1_XXc",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "df1", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_df2_XX",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "df2", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_df2_XXc",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "df2", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_df3_XX",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "df3", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR2_to_df3_XXc",
+      "incoming" : [
+        "dtR2"
+      ],
+      "outgoing" : [
+        "df3", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_uf1c_df1c",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_uf1c_df2c",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_uf1c_df3c",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_uf2c_df1c",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_uf2c_df2c",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_uf2c_df3c",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_uf3c_df1c",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_uf3c_df2c",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_uf3c_df3c",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_df1_XX",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "df1", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_df1_XXc",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "df1", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_df2_XX",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "df2", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_df2_XXc",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "df2", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_df3_XX",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "df3", "XX"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_dtR3_to_df3_XXc",
+      "incoming" : [
+        "dtR3"
+      ],
+      "outgoing" : [
+        "df3", "XX#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 1
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1_df1_df1",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1", "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1_df1_df1",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1", "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1c_df1c_df1c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1c_df1c_df1c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1_df1_df2",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1", "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1_df1_df2",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1", "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1c_df1c_df2c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1c_df1c_df2c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1_df1_df3",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1", "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1_df1_df3",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1", "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1c_df1c_df3c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1c_df1c_df3c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1_df2_df1",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1", "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1_df2_df1",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1", "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1c_df2c_df1c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1c_df2c_df1c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1_df2_df2",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1", "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1_df2_df2",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1", "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1c_df2c_df2c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1c_df2c_df2c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1_df2_df3",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1", "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1_df2_df3",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1", "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1c_df2c_df3c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1c_df2c_df3c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1_df3_df1",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1", "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1_df3_df1",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1", "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1c_df3c_df1c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1c_df3c_df1c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1_df3_df2",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1", "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1_df3_df2",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1", "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1c_df3c_df2c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1c_df3c_df2c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1_df3_df3",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1", "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1_df3_df3",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1", "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf1c_df3c_df3c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf1c_df3c_df3c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2_df1_df1",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2", "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2_df1_df1",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2", "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2c_df1c_df1c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2c_df1c_df1c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2_df1_df2",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2", "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2_df1_df2",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2", "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2c_df1c_df2c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2c_df1c_df2c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2_df1_df3",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2", "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2_df1_df3",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2", "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2c_df1c_df3c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2c_df1c_df3c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2_df2_df1",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2", "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2_df2_df1",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2", "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2c_df2c_df1c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2c_df2c_df1c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2_df2_df2",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2", "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2_df2_df2",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2", "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2c_df2c_df2c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2c_df2c_df2c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2_df2_df3",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2", "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2_df2_df3",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2", "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2c_df2c_df3c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2c_df2c_df3c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2_df3_df1",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2", "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2_df3_df1",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2", "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2c_df3c_df1c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2c_df3c_df1c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2_df3_df2",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2", "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2_df3_df2",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2", "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2c_df3c_df2c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2c_df3c_df2c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2_df3_df3",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2", "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2_df3_df3",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2", "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf2c_df3c_df3c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf2c_df3c_df3c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3_df1_df1",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3", "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3_df1_df1",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3", "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3c_df1c_df1c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3c_df1c_df1c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3_df1_df2",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3", "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3_df1_df2",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3", "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3c_df1c_df2c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3c_df1c_df2c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3_df1_df3",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3", "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3_df1_df3",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3", "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3c_df1c_df3c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3c_df1c_df3c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3_df2_df1",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3", "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3_df2_df1",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3", "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3c_df2c_df1c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3c_df2c_df1c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3_df2_df2",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3", "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3_df2_df2",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3", "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3c_df2c_df2c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3c_df2c_df2c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3_df2_df3",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3", "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3_df2_df3",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3", "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3c_df2c_df3c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3c_df2c_df3c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3_df3_df1",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3", "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3_df3_df1",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3", "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3c_df3c_df1c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3c_df3c_df1c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3_df3_df2",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3", "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3_df3_df2",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3", "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3c_df3c_df2c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3c_df3c_df2c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3_df3_df3",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3", "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3_df3_df3",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3", "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_to_uf3c_df3c_df3c",
+      "incoming" : [
+        "XX"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_to_uf3c_df3c_df3c",
+      "incoming" : [
+        "XX#c"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XXc_to_uf1_uf1c",
+      "incoming" : [
+        "XX", "XX#c"
+      ],
+      "outgoing" : [
+        "uf1", "uf1#c"
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XX_to_uf1_uf1c",
+      "incoming" : [
+        "XX", "XX"
+      ],
+      "outgoing" : [
+        "uf1", "uf1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_XXc_to_uf1_uf1c",
+      "incoming" : [
+        "XX#c", "XX#c"
+      ],
+      "outgoing" : [
+        "uf1", "uf1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : 2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XXc_to_uf2_uf2c",
+      "incoming" : [
+        "XX", "XX#c"
+      ],
+      "outgoing" : [
+        "uf2", "uf2#c"
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XX_to_uf2_uf2c",
+      "incoming" : [
+        "XX", "XX"
+      ],
+      "outgoing" : [
+        "uf2", "uf2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_XXc_to_uf2_uf2c",
+      "incoming" : [
+        "XX#c", "XX#c"
+      ],
+      "outgoing" : [
+        "uf2", "uf2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : 2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XXc_to_uf3_uf3c",
+      "incoming" : [
+        "XX", "XX#c"
+      ],
+      "outgoing" : [
+        "uf3", "uf3#c"
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XX_to_uf3_uf3c",
+      "incoming" : [
+        "XX", "XX"
+      ],
+      "outgoing" : [
+        "uf3", "uf3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_XXc_to_uf3_uf3c",
+      "incoming" : [
+        "XX#c", "XX#c"
+      ],
+      "outgoing" : [
+        "uf3", "uf3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : 2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XXc_to_df1_df1c",
+      "incoming" : [
+        "XX", "XX#c"
+      ],
+      "outgoing" : [
+        "df1", "df1#c"
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XX_to_df1_df1c",
+      "incoming" : [
+        "XX", "XX"
+      ],
+      "outgoing" : [
+        "df1", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_XXc_to_df1_df1c",
+      "incoming" : [
+        "XX#c", "XX#c"
+      ],
+      "outgoing" : [
+        "df1", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : 2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XXc_to_df2_df2c",
+      "incoming" : [
+        "XX", "XX#c"
+      ],
+      "outgoing" : [
+        "df2", "df2#c"
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XX_to_df2_df2c",
+      "incoming" : [
+        "XX", "XX"
+      ],
+      "outgoing" : [
+        "df2", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_XXc_to_df2_df2c",
+      "incoming" : [
+        "XX#c", "XX#c"
+      ],
+      "outgoing" : [
+        "df2", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : 2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XXc_to_df3_df3c",
+      "incoming" : [
+        "XX", "XX#c"
+      ],
+      "outgoing" : [
+        "df3", "df3#c"
+      ]
+    }, 
+    {
+      "name" : "CP_XX_XX_to_df3_df3c",
+      "incoming" : [
+        "XX", "XX"
+      ],
+      "outgoing" : [
+        "df3", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : -2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_XXc_to_df3_df3c",
+      "incoming" : [
+        "XX#c", "XX#c"
+      ],
+      "outgoing" : [
+        "df3", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "X",
+          "value" : 2
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1c_to_df1_df1",
+      "incoming" : [
+        "XX", "uf1#c"
+      ],
+      "outgoing" : [
+        "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1c_to_df1_df1",
+      "incoming" : [
+        "XX#c", "uf1#c"
+      ],
+      "outgoing" : [
+        "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1_to_df1c_df1c",
+      "incoming" : [
+        "XX#c", "uf1"
+      ],
+      "outgoing" : [
+        "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1_to_df1c_df1c",
+      "incoming" : [
+        "XX", "uf1"
+      ],
+      "outgoing" : [
+        "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1c_to_df1_df2",
+      "incoming" : [
+        "XX", "uf1#c"
+      ],
+      "outgoing" : [
+        "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1c_to_df1_df2",
+      "incoming" : [
+        "XX#c", "uf1#c"
+      ],
+      "outgoing" : [
+        "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1_to_df1c_df2c",
+      "incoming" : [
+        "XX#c", "uf1"
+      ],
+      "outgoing" : [
+        "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1_to_df1c_df2c",
+      "incoming" : [
+        "XX", "uf1"
+      ],
+      "outgoing" : [
+        "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1c_to_df1_df3",
+      "incoming" : [
+        "XX", "uf1#c"
+      ],
+      "outgoing" : [
+        "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1c_to_df1_df3",
+      "incoming" : [
+        "XX#c", "uf1#c"
+      ],
+      "outgoing" : [
+        "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1_to_df1c_df3c",
+      "incoming" : [
+        "XX#c", "uf1"
+      ],
+      "outgoing" : [
+        "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1_to_df1c_df3c",
+      "incoming" : [
+        "XX", "uf1"
+      ],
+      "outgoing" : [
+        "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1c_to_df2_df1",
+      "incoming" : [
+        "XX", "uf1#c"
+      ],
+      "outgoing" : [
+        "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1c_to_df2_df1",
+      "incoming" : [
+        "XX#c", "uf1#c"
+      ],
+      "outgoing" : [
+        "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1_to_df2c_df1c",
+      "incoming" : [
+        "XX#c", "uf1"
+      ],
+      "outgoing" : [
+        "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1_to_df2c_df1c",
+      "incoming" : [
+        "XX", "uf1"
+      ],
+      "outgoing" : [
+        "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1c_to_df2_df2",
+      "incoming" : [
+        "XX", "uf1#c"
+      ],
+      "outgoing" : [
+        "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1c_to_df2_df2",
+      "incoming" : [
+        "XX#c", "uf1#c"
+      ],
+      "outgoing" : [
+        "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1_to_df2c_df2c",
+      "incoming" : [
+        "XX#c", "uf1"
+      ],
+      "outgoing" : [
+        "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1_to_df2c_df2c",
+      "incoming" : [
+        "XX", "uf1"
+      ],
+      "outgoing" : [
+        "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1c_to_df2_df3",
+      "incoming" : [
+        "XX", "uf1#c"
+      ],
+      "outgoing" : [
+        "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1c_to_df2_df3",
+      "incoming" : [
+        "XX#c", "uf1#c"
+      ],
+      "outgoing" : [
+        "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1_to_df2c_df3c",
+      "incoming" : [
+        "XX#c", "uf1"
+      ],
+      "outgoing" : [
+        "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1_to_df2c_df3c",
+      "incoming" : [
+        "XX", "uf1"
+      ],
+      "outgoing" : [
+        "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1c_to_df3_df1",
+      "incoming" : [
+        "XX", "uf1#c"
+      ],
+      "outgoing" : [
+        "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1c_to_df3_df1",
+      "incoming" : [
+        "XX#c", "uf1#c"
+      ],
+      "outgoing" : [
+        "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1_to_df3c_df1c",
+      "incoming" : [
+        "XX#c", "uf1"
+      ],
+      "outgoing" : [
+        "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1_to_df3c_df1c",
+      "incoming" : [
+        "XX", "uf1"
+      ],
+      "outgoing" : [
+        "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1c_to_df3_df2",
+      "incoming" : [
+        "XX", "uf1#c"
+      ],
+      "outgoing" : [
+        "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1c_to_df3_df2",
+      "incoming" : [
+        "XX#c", "uf1#c"
+      ],
+      "outgoing" : [
+        "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1_to_df3c_df2c",
+      "incoming" : [
+        "XX#c", "uf1"
+      ],
+      "outgoing" : [
+        "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1_to_df3c_df2c",
+      "incoming" : [
+        "XX", "uf1"
+      ],
+      "outgoing" : [
+        "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1c_to_df3_df3",
+      "incoming" : [
+        "XX", "uf1#c"
+      ],
+      "outgoing" : [
+        "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1c_to_df3_df3",
+      "incoming" : [
+        "XX#c", "uf1#c"
+      ],
+      "outgoing" : [
+        "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf1_to_df3c_df3c",
+      "incoming" : [
+        "XX#c", "uf1"
+      ],
+      "outgoing" : [
+        "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf1_to_df3c_df3c",
+      "incoming" : [
+        "XX", "uf1"
+      ],
+      "outgoing" : [
+        "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2c_to_df1_df1",
+      "incoming" : [
+        "XX", "uf2#c"
+      ],
+      "outgoing" : [
+        "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2c_to_df1_df1",
+      "incoming" : [
+        "XX#c", "uf2#c"
+      ],
+      "outgoing" : [
+        "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2_to_df1c_df1c",
+      "incoming" : [
+        "XX#c", "uf2"
+      ],
+      "outgoing" : [
+        "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2_to_df1c_df1c",
+      "incoming" : [
+        "XX", "uf2"
+      ],
+      "outgoing" : [
+        "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2c_to_df1_df2",
+      "incoming" : [
+        "XX", "uf2#c"
+      ],
+      "outgoing" : [
+        "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2c_to_df1_df2",
+      "incoming" : [
+        "XX#c", "uf2#c"
+      ],
+      "outgoing" : [
+        "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2_to_df1c_df2c",
+      "incoming" : [
+        "XX#c", "uf2"
+      ],
+      "outgoing" : [
+        "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2_to_df1c_df2c",
+      "incoming" : [
+        "XX", "uf2"
+      ],
+      "outgoing" : [
+        "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2c_to_df1_df3",
+      "incoming" : [
+        "XX", "uf2#c"
+      ],
+      "outgoing" : [
+        "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2c_to_df1_df3",
+      "incoming" : [
+        "XX#c", "uf2#c"
+      ],
+      "outgoing" : [
+        "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2_to_df1c_df3c",
+      "incoming" : [
+        "XX#c", "uf2"
+      ],
+      "outgoing" : [
+        "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2_to_df1c_df3c",
+      "incoming" : [
+        "XX", "uf2"
+      ],
+      "outgoing" : [
+        "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2c_to_df2_df1",
+      "incoming" : [
+        "XX", "uf2#c"
+      ],
+      "outgoing" : [
+        "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2c_to_df2_df1",
+      "incoming" : [
+        "XX#c", "uf2#c"
+      ],
+      "outgoing" : [
+        "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2_to_df2c_df1c",
+      "incoming" : [
+        "XX#c", "uf2"
+      ],
+      "outgoing" : [
+        "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2_to_df2c_df1c",
+      "incoming" : [
+        "XX", "uf2"
+      ],
+      "outgoing" : [
+        "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2c_to_df2_df2",
+      "incoming" : [
+        "XX", "uf2#c"
+      ],
+      "outgoing" : [
+        "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2c_to_df2_df2",
+      "incoming" : [
+        "XX#c", "uf2#c"
+      ],
+      "outgoing" : [
+        "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2_to_df2c_df2c",
+      "incoming" : [
+        "XX#c", "uf2"
+      ],
+      "outgoing" : [
+        "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2_to_df2c_df2c",
+      "incoming" : [
+        "XX", "uf2"
+      ],
+      "outgoing" : [
+        "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2c_to_df2_df3",
+      "incoming" : [
+        "XX", "uf2#c"
+      ],
+      "outgoing" : [
+        "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2c_to_df2_df3",
+      "incoming" : [
+        "XX#c", "uf2#c"
+      ],
+      "outgoing" : [
+        "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2_to_df2c_df3c",
+      "incoming" : [
+        "XX#c", "uf2"
+      ],
+      "outgoing" : [
+        "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2_to_df2c_df3c",
+      "incoming" : [
+        "XX", "uf2"
+      ],
+      "outgoing" : [
+        "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2c_to_df3_df1",
+      "incoming" : [
+        "XX", "uf2#c"
+      ],
+      "outgoing" : [
+        "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2c_to_df3_df1",
+      "incoming" : [
+        "XX#c", "uf2#c"
+      ],
+      "outgoing" : [
+        "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2_to_df3c_df1c",
+      "incoming" : [
+        "XX#c", "uf2"
+      ],
+      "outgoing" : [
+        "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2_to_df3c_df1c",
+      "incoming" : [
+        "XX", "uf2"
+      ],
+      "outgoing" : [
+        "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2c_to_df3_df2",
+      "incoming" : [
+        "XX", "uf2#c"
+      ],
+      "outgoing" : [
+        "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2c_to_df3_df2",
+      "incoming" : [
+        "XX#c", "uf2#c"
+      ],
+      "outgoing" : [
+        "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2_to_df3c_df2c",
+      "incoming" : [
+        "XX#c", "uf2"
+      ],
+      "outgoing" : [
+        "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2_to_df3c_df2c",
+      "incoming" : [
+        "XX", "uf2"
+      ],
+      "outgoing" : [
+        "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2c_to_df3_df3",
+      "incoming" : [
+        "XX", "uf2#c"
+      ],
+      "outgoing" : [
+        "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2c_to_df3_df3",
+      "incoming" : [
+        "XX#c", "uf2#c"
+      ],
+      "outgoing" : [
+        "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf2_to_df3c_df3c",
+      "incoming" : [
+        "XX#c", "uf2"
+      ],
+      "outgoing" : [
+        "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf2_to_df3c_df3c",
+      "incoming" : [
+        "XX", "uf2"
+      ],
+      "outgoing" : [
+        "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3c_to_df1_df1",
+      "incoming" : [
+        "XX", "uf3#c"
+      ],
+      "outgoing" : [
+        "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3c_to_df1_df1",
+      "incoming" : [
+        "XX#c", "uf3#c"
+      ],
+      "outgoing" : [
+        "df1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3_to_df1c_df1c",
+      "incoming" : [
+        "XX#c", "uf3"
+      ],
+      "outgoing" : [
+        "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3_to_df1c_df1c",
+      "incoming" : [
+        "XX", "uf3"
+      ],
+      "outgoing" : [
+        "df1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3c_to_df1_df2",
+      "incoming" : [
+        "XX", "uf3#c"
+      ],
+      "outgoing" : [
+        "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3c_to_df1_df2",
+      "incoming" : [
+        "XX#c", "uf3#c"
+      ],
+      "outgoing" : [
+        "df1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3_to_df1c_df2c",
+      "incoming" : [
+        "XX#c", "uf3"
+      ],
+      "outgoing" : [
+        "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3_to_df1c_df2c",
+      "incoming" : [
+        "XX", "uf3"
+      ],
+      "outgoing" : [
+        "df1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3c_to_df1_df3",
+      "incoming" : [
+        "XX", "uf3#c"
+      ],
+      "outgoing" : [
+        "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3c_to_df1_df3",
+      "incoming" : [
+        "XX#c", "uf3#c"
+      ],
+      "outgoing" : [
+        "df1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3_to_df1c_df3c",
+      "incoming" : [
+        "XX#c", "uf3"
+      ],
+      "outgoing" : [
+        "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3_to_df1c_df3c",
+      "incoming" : [
+        "XX", "uf3"
+      ],
+      "outgoing" : [
+        "df1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3c_to_df2_df1",
+      "incoming" : [
+        "XX", "uf3#c"
+      ],
+      "outgoing" : [
+        "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3c_to_df2_df1",
+      "incoming" : [
+        "XX#c", "uf3#c"
+      ],
+      "outgoing" : [
+        "df2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3_to_df2c_df1c",
+      "incoming" : [
+        "XX#c", "uf3"
+      ],
+      "outgoing" : [
+        "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3_to_df2c_df1c",
+      "incoming" : [
+        "XX", "uf3"
+      ],
+      "outgoing" : [
+        "df2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3c_to_df2_df2",
+      "incoming" : [
+        "XX", "uf3#c"
+      ],
+      "outgoing" : [
+        "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3c_to_df2_df2",
+      "incoming" : [
+        "XX#c", "uf3#c"
+      ],
+      "outgoing" : [
+        "df2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3_to_df2c_df2c",
+      "incoming" : [
+        "XX#c", "uf3"
+      ],
+      "outgoing" : [
+        "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3_to_df2c_df2c",
+      "incoming" : [
+        "XX", "uf3"
+      ],
+      "outgoing" : [
+        "df2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3c_to_df2_df3",
+      "incoming" : [
+        "XX", "uf3#c"
+      ],
+      "outgoing" : [
+        "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3c_to_df2_df3",
+      "incoming" : [
+        "XX#c", "uf3#c"
+      ],
+      "outgoing" : [
+        "df2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3_to_df2c_df3c",
+      "incoming" : [
+        "XX#c", "uf3"
+      ],
+      "outgoing" : [
+        "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3_to_df2c_df3c",
+      "incoming" : [
+        "XX", "uf3"
+      ],
+      "outgoing" : [
+        "df2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3c_to_df3_df1",
+      "incoming" : [
+        "XX", "uf3#c"
+      ],
+      "outgoing" : [
+        "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3c_to_df3_df1",
+      "incoming" : [
+        "XX#c", "uf3#c"
+      ],
+      "outgoing" : [
+        "df3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3_to_df3c_df1c",
+      "incoming" : [
+        "XX#c", "uf3"
+      ],
+      "outgoing" : [
+        "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3_to_df3c_df1c",
+      "incoming" : [
+        "XX", "uf3"
+      ],
+      "outgoing" : [
+        "df3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3c_to_df3_df2",
+      "incoming" : [
+        "XX", "uf3#c"
+      ],
+      "outgoing" : [
+        "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3c_to_df3_df2",
+      "incoming" : [
+        "XX#c", "uf3#c"
+      ],
+      "outgoing" : [
+        "df3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3_to_df3c_df2c",
+      "incoming" : [
+        "XX#c", "uf3"
+      ],
+      "outgoing" : [
+        "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3_to_df3c_df2c",
+      "incoming" : [
+        "XX", "uf3"
+      ],
+      "outgoing" : [
+        "df3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3c_to_df3_df3",
+      "incoming" : [
+        "XX", "uf3#c"
+      ],
+      "outgoing" : [
+        "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3c_to_df3_df3",
+      "incoming" : [
+        "XX#c", "uf3#c"
+      ],
+      "outgoing" : [
+        "df3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_uf3_to_df3c_df3c",
+      "incoming" : [
+        "XX#c", "uf3"
+      ],
+      "outgoing" : [
+        "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_uf3_to_df3c_df3c",
+      "incoming" : [
+        "XX", "uf3"
+      ],
+      "outgoing" : [
+        "df3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1c_to_uf1_df1",
+      "incoming" : [
+        "XX", "df1#c"
+      ],
+      "outgoing" : [
+        "uf1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1c_to_uf1_df1",
+      "incoming" : [
+        "XX#c", "df1#c"
+      ],
+      "outgoing" : [
+        "uf1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1_to_uf1c_df1c",
+      "incoming" : [
+        "XX#c", "df1"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1_to_uf1c_df1c",
+      "incoming" : [
+        "XX", "df1"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1c_to_uf1_df2",
+      "incoming" : [
+        "XX", "df1#c"
+      ],
+      "outgoing" : [
+        "uf1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1c_to_uf1_df2",
+      "incoming" : [
+        "XX#c", "df1#c"
+      ],
+      "outgoing" : [
+        "uf1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1_to_uf1c_df2c",
+      "incoming" : [
+        "XX#c", "df1"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1_to_uf1c_df2c",
+      "incoming" : [
+        "XX", "df1"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1c_to_uf1_df3",
+      "incoming" : [
+        "XX", "df1#c"
+      ],
+      "outgoing" : [
+        "uf1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1c_to_uf1_df3",
+      "incoming" : [
+        "XX#c", "df1#c"
+      ],
+      "outgoing" : [
+        "uf1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1_to_uf1c_df3c",
+      "incoming" : [
+        "XX#c", "df1"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1_to_uf1c_df3c",
+      "incoming" : [
+        "XX", "df1"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2c_to_uf1_df1",
+      "incoming" : [
+        "XX", "df2#c"
+      ],
+      "outgoing" : [
+        "uf1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2c_to_uf1_df1",
+      "incoming" : [
+        "XX#c", "df2#c"
+      ],
+      "outgoing" : [
+        "uf1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2_to_uf1c_df1c",
+      "incoming" : [
+        "XX#c", "df2"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2_to_uf1c_df1c",
+      "incoming" : [
+        "XX", "df2"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2c_to_uf1_df2",
+      "incoming" : [
+        "XX", "df2#c"
+      ],
+      "outgoing" : [
+        "uf1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2c_to_uf1_df2",
+      "incoming" : [
+        "XX#c", "df2#c"
+      ],
+      "outgoing" : [
+        "uf1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2_to_uf1c_df2c",
+      "incoming" : [
+        "XX#c", "df2"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2_to_uf1c_df2c",
+      "incoming" : [
+        "XX", "df2"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2c_to_uf1_df3",
+      "incoming" : [
+        "XX", "df2#c"
+      ],
+      "outgoing" : [
+        "uf1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2c_to_uf1_df3",
+      "incoming" : [
+        "XX#c", "df2#c"
+      ],
+      "outgoing" : [
+        "uf1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2_to_uf1c_df3c",
+      "incoming" : [
+        "XX#c", "df2"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2_to_uf1c_df3c",
+      "incoming" : [
+        "XX", "df2"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3c_to_uf1_df1",
+      "incoming" : [
+        "XX", "df3#c"
+      ],
+      "outgoing" : [
+        "uf1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3c_to_uf1_df1",
+      "incoming" : [
+        "XX#c", "df3#c"
+      ],
+      "outgoing" : [
+        "uf1", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3_to_uf1c_df1c",
+      "incoming" : [
+        "XX#c", "df3"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3_to_uf1c_df1c",
+      "incoming" : [
+        "XX", "df3"
+      ],
+      "outgoing" : [
+        "uf1#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3c_to_uf1_df2",
+      "incoming" : [
+        "XX", "df3#c"
+      ],
+      "outgoing" : [
+        "uf1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3c_to_uf1_df2",
+      "incoming" : [
+        "XX#c", "df3#c"
+      ],
+      "outgoing" : [
+        "uf1", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3_to_uf1c_df2c",
+      "incoming" : [
+        "XX#c", "df3"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3_to_uf1c_df2c",
+      "incoming" : [
+        "XX", "df3"
+      ],
+      "outgoing" : [
+        "uf1#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3c_to_uf1_df3",
+      "incoming" : [
+        "XX", "df3#c"
+      ],
+      "outgoing" : [
+        "uf1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3c_to_uf1_df3",
+      "incoming" : [
+        "XX#c", "df3#c"
+      ],
+      "outgoing" : [
+        "uf1", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3_to_uf1c_df3c",
+      "incoming" : [
+        "XX#c", "df3"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3_to_uf1c_df3c",
+      "incoming" : [
+        "XX", "df3"
+      ],
+      "outgoing" : [
+        "uf1#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1c_to_uf2_df1",
+      "incoming" : [
+        "XX", "df1#c"
+      ],
+      "outgoing" : [
+        "uf2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1c_to_uf2_df1",
+      "incoming" : [
+        "XX#c", "df1#c"
+      ],
+      "outgoing" : [
+        "uf2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1_to_uf2c_df1c",
+      "incoming" : [
+        "XX#c", "df1"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1_to_uf2c_df1c",
+      "incoming" : [
+        "XX", "df1"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1c_to_uf2_df2",
+      "incoming" : [
+        "XX", "df1#c"
+      ],
+      "outgoing" : [
+        "uf2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1c_to_uf2_df2",
+      "incoming" : [
+        "XX#c", "df1#c"
+      ],
+      "outgoing" : [
+        "uf2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1_to_uf2c_df2c",
+      "incoming" : [
+        "XX#c", "df1"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1_to_uf2c_df2c",
+      "incoming" : [
+        "XX", "df1"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1c_to_uf2_df3",
+      "incoming" : [
+        "XX", "df1#c"
+      ],
+      "outgoing" : [
+        "uf2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1c_to_uf2_df3",
+      "incoming" : [
+        "XX#c", "df1#c"
+      ],
+      "outgoing" : [
+        "uf2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1_to_uf2c_df3c",
+      "incoming" : [
+        "XX#c", "df1"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1_to_uf2c_df3c",
+      "incoming" : [
+        "XX", "df1"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2c_to_uf2_df1",
+      "incoming" : [
+        "XX", "df2#c"
+      ],
+      "outgoing" : [
+        "uf2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2c_to_uf2_df1",
+      "incoming" : [
+        "XX#c", "df2#c"
+      ],
+      "outgoing" : [
+        "uf2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2_to_uf2c_df1c",
+      "incoming" : [
+        "XX#c", "df2"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2_to_uf2c_df1c",
+      "incoming" : [
+        "XX", "df2"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2c_to_uf2_df2",
+      "incoming" : [
+        "XX", "df2#c"
+      ],
+      "outgoing" : [
+        "uf2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2c_to_uf2_df2",
+      "incoming" : [
+        "XX#c", "df2#c"
+      ],
+      "outgoing" : [
+        "uf2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2_to_uf2c_df2c",
+      "incoming" : [
+        "XX#c", "df2"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2_to_uf2c_df2c",
+      "incoming" : [
+        "XX", "df2"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2c_to_uf2_df3",
+      "incoming" : [
+        "XX", "df2#c"
+      ],
+      "outgoing" : [
+        "uf2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2c_to_uf2_df3",
+      "incoming" : [
+        "XX#c", "df2#c"
+      ],
+      "outgoing" : [
+        "uf2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2_to_uf2c_df3c",
+      "incoming" : [
+        "XX#c", "df2"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2_to_uf2c_df3c",
+      "incoming" : [
+        "XX", "df2"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3c_to_uf2_df1",
+      "incoming" : [
+        "XX", "df3#c"
+      ],
+      "outgoing" : [
+        "uf2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3c_to_uf2_df1",
+      "incoming" : [
+        "XX#c", "df3#c"
+      ],
+      "outgoing" : [
+        "uf2", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3_to_uf2c_df1c",
+      "incoming" : [
+        "XX#c", "df3"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3_to_uf2c_df1c",
+      "incoming" : [
+        "XX", "df3"
+      ],
+      "outgoing" : [
+        "uf2#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3c_to_uf2_df2",
+      "incoming" : [
+        "XX", "df3#c"
+      ],
+      "outgoing" : [
+        "uf2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3c_to_uf2_df2",
+      "incoming" : [
+        "XX#c", "df3#c"
+      ],
+      "outgoing" : [
+        "uf2", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3_to_uf2c_df2c",
+      "incoming" : [
+        "XX#c", "df3"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3_to_uf2c_df2c",
+      "incoming" : [
+        "XX", "df3"
+      ],
+      "outgoing" : [
+        "uf2#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3c_to_uf2_df3",
+      "incoming" : [
+        "XX", "df3#c"
+      ],
+      "outgoing" : [
+        "uf2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3c_to_uf2_df3",
+      "incoming" : [
+        "XX#c", "df3#c"
+      ],
+      "outgoing" : [
+        "uf2", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3_to_uf2c_df3c",
+      "incoming" : [
+        "XX#c", "df3"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3_to_uf2c_df3c",
+      "incoming" : [
+        "XX", "df3"
+      ],
+      "outgoing" : [
+        "uf2#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1c_to_uf3_df1",
+      "incoming" : [
+        "XX", "df1#c"
+      ],
+      "outgoing" : [
+        "uf3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1c_to_uf3_df1",
+      "incoming" : [
+        "XX#c", "df1#c"
+      ],
+      "outgoing" : [
+        "uf3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1_to_uf3c_df1c",
+      "incoming" : [
+        "XX#c", "df1"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1_to_uf3c_df1c",
+      "incoming" : [
+        "XX", "df1"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1c_to_uf3_df2",
+      "incoming" : [
+        "XX", "df1#c"
+      ],
+      "outgoing" : [
+        "uf3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1c_to_uf3_df2",
+      "incoming" : [
+        "XX#c", "df1#c"
+      ],
+      "outgoing" : [
+        "uf3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1_to_uf3c_df2c",
+      "incoming" : [
+        "XX#c", "df1"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1_to_uf3c_df2c",
+      "incoming" : [
+        "XX", "df1"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1c_to_uf3_df3",
+      "incoming" : [
+        "XX", "df1#c"
+      ],
+      "outgoing" : [
+        "uf3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1c_to_uf3_df3",
+      "incoming" : [
+        "XX#c", "df1#c"
+      ],
+      "outgoing" : [
+        "uf3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df1_to_uf3c_df3c",
+      "incoming" : [
+        "XX#c", "df1"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df1_to_uf3c_df3c",
+      "incoming" : [
+        "XX", "df1"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2c_to_uf3_df1",
+      "incoming" : [
+        "XX", "df2#c"
+      ],
+      "outgoing" : [
+        "uf3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2c_to_uf3_df1",
+      "incoming" : [
+        "XX#c", "df2#c"
+      ],
+      "outgoing" : [
+        "uf3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2_to_uf3c_df1c",
+      "incoming" : [
+        "XX#c", "df2"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2_to_uf3c_df1c",
+      "incoming" : [
+        "XX", "df2"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2c_to_uf3_df2",
+      "incoming" : [
+        "XX", "df2#c"
+      ],
+      "outgoing" : [
+        "uf3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2c_to_uf3_df2",
+      "incoming" : [
+        "XX#c", "df2#c"
+      ],
+      "outgoing" : [
+        "uf3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2_to_uf3c_df2c",
+      "incoming" : [
+        "XX#c", "df2"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2_to_uf3c_df2c",
+      "incoming" : [
+        "XX", "df2"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2c_to_uf3_df3",
+      "incoming" : [
+        "XX", "df2#c"
+      ],
+      "outgoing" : [
+        "uf3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2c_to_uf3_df3",
+      "incoming" : [
+        "XX#c", "df2#c"
+      ],
+      "outgoing" : [
+        "uf3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df2_to_uf3c_df3c",
+      "incoming" : [
+        "XX#c", "df2"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df2_to_uf3c_df3c",
+      "incoming" : [
+        "XX", "df2"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3c_to_uf3_df1",
+      "incoming" : [
+        "XX", "df3#c"
+      ],
+      "outgoing" : [
+        "uf3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3c_to_uf3_df1",
+      "incoming" : [
+        "XX#c", "df3#c"
+      ],
+      "outgoing" : [
+        "uf3", "df1"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3_to_uf3c_df1c",
+      "incoming" : [
+        "XX#c", "df3"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3_to_uf3c_df1c",
+      "incoming" : [
+        "XX", "df3"
+      ],
+      "outgoing" : [
+        "uf3#c", "df1#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3c_to_uf3_df2",
+      "incoming" : [
+        "XX", "df3#c"
+      ],
+      "outgoing" : [
+        "uf3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3c_to_uf3_df2",
+      "incoming" : [
+        "XX#c", "df3#c"
+      ],
+      "outgoing" : [
+        "uf3", "df2"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3_to_uf3c_df2c",
+      "incoming" : [
+        "XX#c", "df3"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3_to_uf3c_df2c",
+      "incoming" : [
+        "XX", "df3"
+      ],
+      "outgoing" : [
+        "uf3#c", "df2#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3c_to_uf3_df3",
+      "incoming" : [
+        "XX", "df3#c"
+      ],
+      "outgoing" : [
+        "uf3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3c_to_uf3_df3",
+      "incoming" : [
+        "XX#c", "df3#c"
+      ],
+      "outgoing" : [
+        "uf3", "df3"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : 3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XXc_df3_to_uf3c_df3c",
+      "incoming" : [
+        "XX#c", "df3"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : 1
+        }
+      ]
+    }, 
+    {
+      "name" : "CP_XX_df3_to_uf3c_df3c",
+      "incoming" : [
+        "XX", "df3"
+      ],
+      "outgoing" : [
+        "uf3#c", "df3#c"
+      ],
+      "quantum numbers" : [
+        {
+          "name" : "B",
+          "value" : -3
+        }, 
+        {
+          "name" : "X",
+          "value" : -1
+        }
+      ]
     }
   ]
 }
