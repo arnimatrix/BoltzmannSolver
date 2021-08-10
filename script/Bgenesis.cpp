@@ -327,7 +327,7 @@ int main()
     qData.addQuantumNumber(
             "B",
             {"uf1", "uf2", "uf3", "df1", "df2", "df3"},
-            {1, 1, 1, 1, 1, 1}
+            {1, 1, CSL_1 / 2, 1, CSL_1 / 3, 1}
             );
     qData.addQuantumNumber(
             "X",
@@ -339,39 +339,22 @@ int main()
     // 
     ///////////////////////////////////////////////////
 
-    // addQNumber(
-    //         "EM",
-    //         {"e", "u", "d"},
-    //         {-1, 2*CSL_1/3, -CSL_1/3, CSL_1/4},
-    //         false
-    //         );
+    mty::saveModelDatatoJson("test.json", toyModel);
+    ParticleData data = ParticleData::readFromJson("test.json");
+    std::cout << data.getCommonFactor("B") << '\n';
+    std::cout << data << '\n';
+    std::cout << data("B", "dtL3") * 1. / data.getCommonFactor("B") << '\n';
+    std::cout << data("n_X", "dtL3") << '\n';
+    std::cout << data("B", "Q") << '\n';
+    std::cout << data("n_X", "Q") << '\n';
+    std::cout << data("B", "XX") << '\n';
+    std::cout << data("n_X", "XX") << '\n';
 
-    // toyModel.addQuantumNumber(
-    //         "B",
-    //         {"dtL1", "dtL2", "dtL3"},
-    //         {1, 1, 1},
-    //         false
-    //         );
+    for (const auto &func : data.getViolating("B")) {
+        auto value = func(param);
+    }
 
-    // toyModel.addQuantumNumber(
-    //         "n_X",
-    //         {"XX"},
-    //         {3},
-    //         false
-    //         );
-
-    // mty::saveModelDatatoJson("test.json", toyModel);
-    // ParticleData data = ParticleData::readFromJson("test.json");
-    // std::cout << data.getCommonFactor("B") << '\n';
-    // std::cout << data << '\n';
-    // std::cout << data("B", "dtL3") * 1. / data.getCommonFactor("B") << '\n';
-    // std::cout << data("n_X", "dtL3") << '\n';
-    // std::cout << data("B", "Q") << '\n';
-    // std::cout << data("n_X", "Q") << '\n';
-    // std::cout << data("B", "XX") << '\n';
-    // std::cout << data("n_X", "XX") << '\n';
-
-    // return 0;
+    return 0;
 
     auto rules = toyModel.getFeynmanRules();
     Display(rules); // Displays expressions in terminal
