@@ -12,10 +12,10 @@ OBJDIR    = obj
 BINDIR    = bin
 
 # Paths to headers (-I...)
-IPATH = -I$(INCDIR)
+IPATH = -I$(INCDIR) -I/usr/local/include
 
 # Paths to libraries (-L...)
-LPATH =
+LPATH = -L/usr/local/lib
 
 # Libraries
 LIBS  = -lmarty

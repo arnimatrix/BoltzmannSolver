@@ -339,6 +339,7 @@ int main()
     // 
     ///////////////////////////////////////////////////
 
+    /*
     mty::saveModelDatatoJson("test.json", toyModel);
     ParticleData data = ParticleData::readFromJson("test.json");
     std::cout << data.getCommonFactor("B") << '\n';
@@ -355,6 +356,7 @@ int main()
     }
 
     return 0;
+     */
 
     auto rules = toyModel.getFeynmanRules();
     Display(rules); // Displays expressions in terminal
