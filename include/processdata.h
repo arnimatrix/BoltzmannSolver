@@ -19,9 +19,11 @@ namespace mty {
 
     public:
 
+        IMPLEMENTS_STD_VECTOR(Process, processes)
+
         ProcessData(mty::Model const &t_model);
 
-        void addProcess(
+        Process &addProcess(
                 std::string                 const &name,
                 std::vector<mty::Insertion> const &insertions,
                 QuantumNumberData           const &qData
