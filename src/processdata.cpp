@@ -9,7 +9,7 @@ namespace mty {
 
     }
 
-    void ProcessData::addProcess(
+    ProcessData::Process &ProcessData::addProcess(
             std::string                 const &name,
             std::vector<mty::Insertion> const &insertions,
             QuantumNumberData           const &qData
@@ -27,6 +27,8 @@ namespace mty {
         }
         processQuantumNumbers(p, qData);
         processes.push_back(p);
+
+        return processes.back();
     }
 
     std::unique_ptr<JSON::Node> ProcessData::generateJSONParticleList(

@@ -43,7 +43,21 @@ void calculateAndGenerateLib(std::string const&            initProcessName,
     const auto sampl            = model.computeSquaredAmplitude(ampl);
     const auto finalProcessName = FindProcessName(initProcessName, insertions);
     if (sampl != CSL_0) {
-        pData.addProcess(finalProcessName, insertions, qData);
+        // Sample use of the process
+        auto process = pData.addProcess(finalProcessName, insertions, qData);
+        if (process.qNumbers["B"] != 0) {
+            // violates baryonic number, do something...
+            std::string processName = process.name; // Process (function) name
+            std::cout << processName << " violates baryon number!" << std::endl;
+        }
+        // Can also loop over all processes in pData once all the calculations 
+        // are finished
+        for (auto &process : pData) {
+            if (process.qNumbers["B"] != 0) {
+                // ...
+            }
+        }
+
         lib.addFunction(finalProcessName, sampl);
         file << finalProcessName << std::endl;
     }
@@ -335,6 +349,7 @@ int main()
             {1}
             );
 
+<<<<<<< HEAD
     ///////////////////////////////////////////////////
     // 
     ///////////////////////////////////////////////////
@@ -357,6 +372,28 @@ int main()
 
     return 0;
      */
+=======
+    // ///////////////////////////////////////////////////
+    // // 
+    // ///////////////////////////////////////////////////
+
+    // mty::saveModelDatatoJson("test.json", toyModel);
+    // ParticleData data = ParticleData::readFromJson("test.json");
+    // std::cout << data.getCommonFactor("B") << '\n';
+    // std::cout << data << '\n';
+    // std::cout << data("B", "dtL3") * 1. / data.getCommonFactor("B") << '\n';
+    // std::cout << data("n_X", "dtL3") << '\n';
+    // std::cout << data("B", "Q") << '\n';
+    // std::cout << data("n_X", "Q") << '\n';
+    // std::cout << data("B", "XX") << '\n';
+    // std::cout << data("n_X", "XX") << '\n';
+
+    // for (const auto &func : data.getViolating("B")) {
+    //     auto value = func(param);
+    // }
+
+    // return 0;
+>>>>>>> bf77dd0fa5f052936adc755540402d38f3ad8839
 
     auto rules = toyModel.getFeynmanRules();
     Display(rules); // Displays expressions in terminal
