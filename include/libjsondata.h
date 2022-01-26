@@ -31,13 +31,28 @@ namespace mty::lib {
         std::vector<Particle> inParticles;
         std::vector<Particle> outParticles;
         std::map<std::string, int> qNumbers;
+    };
 
+    struct Rational {
+        int num;
+        int denom;
+
+        double getValue() const { return num * 1. / denom; }
     };
 
     struct QuantumNumber {
         std::string name;
         int         factor;
         std::map<std::string, int> particles;
+
+        Rational getQuantumNumberValue(
+            std::string const &particleName,
+            bool               isParticle = true
+            );
+
+        Rational getQuantumNumberValue(
+            Particle const &particle
+            );
     };
 
     std::ostream &operator<<(std::ostream &out, Process const &process);
@@ -46,6 +61,25 @@ namespace mty::lib {
     class ParticleData {
 
         public:
+
+        std::vector<std::string> const &getParticleNames() const {
+            return particleNames;
+        }
+
+        std::vector<QuantumNumber> const &getQuantumNumbers() const {
+            return qNumbers;
+        }
+
+        Rational getQuantumNumberValue(
+            std::string const &quantumNumber,
+            std::string const &particleName,
+            bool               isParticle = true
+            );
+
+        Rational getQuantumNumberValue(
+            std::string const &quantumNumber,
+            Particle    const &particle
+            );
 
         std::vector<Process> getProcesses(
                 std::function<bool(Process const&)> selection
@@ -80,6 +114,8 @@ namespace mty::lib {
 
         std::vector<Particle> loadParticles(JSON::Node const *node) const;
 
+        void addParticles(std::vector<Particle> const &particles);
+
         void loadProcessQNumber(
                 JSON::Node const *node,
                 Process          &process
@@ -92,6 +128,8 @@ namespace mty::lib {
                     );
 
         private:
+
+        std::vector<std::string> particleNames;
 
         std::vector<QuantumNumber> qNumbers;
 
