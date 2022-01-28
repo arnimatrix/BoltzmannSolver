@@ -4,6 +4,55 @@ using namespace JSON;
 
 namespace mty::lib {
 
+    Rational QuantumNumber::getQuantumNumberValue(
+          std::string const &particleName,
+          bool               isParticle
+          )
+    {
+        return getQuantumNumberValue(Particle{particleName, isParticle});
+    }
+
+    Rational QuantumNumber::getQuantumNumberValue(
+          Particle const &particle
+          )
+    {
+        int sign = particle.particle ? 1 : -1;
+        return Rational { sign * particles[particle.name], factor };
+    }
+
+    Rational ParticleData::getQuantumNumberValue(
+          std::string const &quantumNumber,
+          std::string const &particleName,
+          bool               isParticle
+          )
+    {
+        return getQuantumNumberValue(
+            quantumNumber, 
+            Particle{particleName, isParticle});
+    }
+
+    Rational ParticleData::getQuantumNumberValue(
+          std::string const &quantumNumber,
+          Particle    const &particle
+          )
+    {
+        auto pos_number = std::find_if(
+            qNumbers.begin(), 
+            qNumbers.end(), 
+            [&](QuantumNumber const &q) { return q.name == quantumNumber; }
+            );
+        if (pos_number == qNumbers.end()) {
+            std::cerr << "Error: Quantum number \"" << quantumNumber
+                << "\" not found in the list.\n";
+            std::cerr << "Candidates are: \n";
+            for (const auto &qNumber : qNumbers) {
+                std::cerr << qNumber << std::endl;
+            }
+            exit(1);
+        }
+        return pos_number->getQuantumNumberValue(particle);
+    }
+
     void ParticleData::loadFile(std::string const &nameFile)
     {
         clear();
@@ -114,6 +163,8 @@ namespace mty::lib {
             process.name = name;
             process.inParticles = loadParticles(incoming);
             process.outParticles = loadParticles(outgoing);
+            addParticles(process.inParticles);
+            addParticles(process.outParticles);
             if (qNumbers)
                 loadProcessQNumber(qNumbers, process);
             processes.push_back(process);
@@ -145,6 +196,18 @@ namespace mty::lib {
         return particles;
     }
 
+    void ParticleData::addParticles(std::vector<Particle> const &particles)
+    {
+        for (const auto &particle : particles) {
+            auto pos = std::find(
+                particleNames.begin(), 
+                particleNames.end(),
+                particle.name);
+            if (pos == particleNames.end()) {
+                particleNames.push_back(particle.name);
+            }
+        }
+    }
 
     std::ostream &operator<<(std::ostream &out, Process const &process)
     {
@@ -185,6 +248,11 @@ namespace mty::lib {
             ParticleData const &data
             )
     {
+        out << "Particles :\n";
+        for (const auto &particle : data.particleNames) {
+            out << particle << " ";
+        }
+        out << '\n';
         out << "Quantum numbers :\n";
         for (const auto &qNumber : data.qNumbers) {
             out << qNumber;

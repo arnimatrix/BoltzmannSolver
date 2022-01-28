@@ -604,6 +604,16 @@ int main()
     ///////////////////////////////////////////////////
 
     saveParticleData("test.json", qData, pData);
+    mty::lib::ParticleData data;
+    data.loadFile("test.json");
+    std::cout << data << std::endl;
+    std::cout << data.getQuantumNumberValue("B", "df1").getValue() << std::endl;
+    std::cout << data.getQuantumNumberValue("B", "df1_L").getValue() << std::endl;
+    std::cout << data.getQuantumNumberValue("B", "df2").getValue() << std::endl;
+    std::cout << data.getQuantumNumberValue("B", "uf3").getValue() << std::endl;
+    std::cout << data.getQuantumNumberValue("X", "XX").getValue() << std::endl;
+    std::cout << data.getQuantumNumberValue("X", "XX_L").getValue() << std::endl;
+
 
     myLib.generateSpectrum(toyModel);
     // myLib.importLHAModule(".");
