@@ -12,7 +12,16 @@
 #include <fstream>
 #include <thread>
 #include <chrono>
+#include <utility>
 
+using namespace std;
+using Eigen::MatrixXd;
+using namespace Eigen;
+
+using namespace mty::lib;
+
+
+namespace leptoproto{
 
 #define mpl 1.22e19
 #define hc2 3.89379338e-28
@@ -25,14 +34,6 @@
 
 #define EP 0.01
 
-using namespace std;
-
-using namespace leptoproto;
-
-using Eigen::MatrixXd;
-using namespace Eigen;
-
-using namespace mty::lib;
 
 const int ki = 12;
 const int li = 13;
@@ -132,14 +133,18 @@ vector<double> const temp {0.001,0.00107855,0.00124135,0.00146572,0.00173064,0.0
 
 vector<double> const geff {10.5372,10.5372,10.5384,10.5398,10.5412,10.6599,10.6617,10.3117,10.548,10.7844,10.7861,10.7881,11.0237,10.7916,10.793,10.7946,11.2642,11.8514,12.5555,13.2596,13.7288,14.1983,15.0195,15.7233,16.3099,17.014,17.483,18.4204,19.2408,20.1781,21.5834,22.7544,24.0428,25.5651,27.2042,28.8439,31.654,34.2296,36.4544,38.7961,40.4353,42.5432,45.1191,48.3973,49.9195,51.2079,52.2621,53.3163,54.2535,55.6589,57.0644,58.4699,59.7582,60.8123,61.9835,63.5059,64.3257,64.9117,66.434,67.488,68.3078,69.5965,71.4701,72.6414,73.2272,74.1643,75.3355,76.5072,77.5614,78.3816,79.2016,79.7881,80.4911,81.3116,81.7807,82.6015,83.0717,83.4244,83.7766,84.0121,84.0133,84.0147,84.0169,84.4866,84.9564,85.5445,86.2482,87.0688,88.3585,89.7646,90.5851,91.6394,92.4597,93.5141,94.6855,95.7399,96.7944,97.849,99.1374,100.075,100.661,101.481,102.184,103.239,103.943,104.529,104.998,105.941,105.703,105.94,105.709,105.828,105.712,105.831,105.832,105.95,105.95};
 
-struct plist {
-    vector<int> prid;
+
+struct plist{
+    std::vector<std::pair <int,Process>> prinfo;
 };
 
-struct asym_param {
+struct asym_param{
     std::vector<Process> procL;
     std::vector<Process> procQ;
 };
+
+
+const std::array<std::string, 10> Thptl = {"N_3", "et", "N_2", "N_1","SS","lL_1","lL_2","lL_3","W","B"};
 
 const std::array<std::string, 4> Xptl = {"N_3", "et", "N_2", "N_1"};
 
@@ -151,14 +156,15 @@ const std::array<pair <std::string,double> , 10> gptl = {
     std::make_pair("N_1",2.),
     std::make_pair("N_2",2.),
     std::make_pair("N_3",2.),
-    std::make_pair("et",4.),
-    std::make_pair("SS",2.),
-    std::make_pair("lL_1",4.),
-    std::make_pair("lL_1",4.),
-    std::make_pair("lL_1",4.),
+    std::make_pair("et",2.),
+    std::make_pair("SS",1.),
+    std::make_pair("lL_1",2.),
+    std::make_pair("lL_1",2.),
+    std::make_pair("lL_1",2.),
     std::make_pair("W",2.),
     std::make_pair("B",2.)
 };
+
 
 void initialize();
 void findAmp(std::string pname,int &id);
@@ -174,12 +180,19 @@ complex_t L(complex_t xx,complex_t yy,complex_t zz);
 
 complex_t Decay(int &pid,param_t &pp,Process prc,int loop);
 //double gamma(int &pid,double const &T,param_t &data,Process prc);
-double gamma(int &pid,double const &T,param_t &data,Process prc,int loop);
+double gamma(int pid,double const &T,param_t &data,Process prc,int loop);
+double freezeout(param_t &pp);
 double epsilon1(std::string ll,std::string ptl,param_t &pp);
 void initialize(std::vector<Process> &proc);
 void BESolver(std::ofstream &ofile,param_t &pp);
+double bisection(double a, double b,double z_cut,param_t &pp,double &Mscale);
+double washout(double zz,double &Mscale,std::vector<Process> &procL,param_t &pp);
+double freezeout(param_t &pp,asym_param ap);
+double bisection(double a, double b,double z_cut,param_t &pp,double &Mscale,asym_param ap);
+double washout(double zz,double &Mscale,std::vector<Process> &procL,param_t &pp);
 //void functh(param_t &pp,double hh,double zl,Eigen::VectorXcd &yn);
 
 //void diff(std::ofstream &file,double zmax,double zin,param_t &p);
 
 
+}
